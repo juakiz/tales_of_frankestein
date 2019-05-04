@@ -14,7 +14,7 @@ export default class MenuScene extends Phaser.Scene {
     //   x:1000,
     //   duration: 4500,
     //   yoyo: true,
-    //   repeat: -1
+    //   repeat: -1sr
     // })
 
     this.menuView = this.add.container();
