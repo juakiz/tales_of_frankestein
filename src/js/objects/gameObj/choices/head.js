@@ -16,18 +16,15 @@ export default class Head extends Phaser.GameObjects.Container {
     }
 
     create() {
-        const portrait = this.portrait = this.scene.add.image(0, 0, 'portrait_gorilla');
+        const portrait = this.portrait = this.scene.add.image(0, 0, 'portrait_effigie');
         portrait.setPosition(418 / 2, 298 / 2);
         portrait.setScale(0.73);
         this.add(portrait);
 
-        // const cabeza = this.cabeza = this.scene.add.image(-15, 0, 'diseccion_cabeza');
-        // cabeza.setOrigin(0.5, 1);
-        // this.add(cabeza);
-
-        // const brazo_der = this.brazo_der = this.scene.add.image(0, 0, 'diseccion_brazo_der');
-        // brazo_der.setOrigin(0.5, 1);
-        // this.add(brazo_der);
+        const part = this.part = this.scene.add.image(0, 0, 'cabeza');
+        part.setPosition(418 / 2, 298 / 2);
+        part.setScale(0.5);
+        this.add(part);
     }
 
     update() {

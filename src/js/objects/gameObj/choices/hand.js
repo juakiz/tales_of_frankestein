@@ -16,15 +16,15 @@ export default class Hand extends Phaser.GameObjects.Container {
     }
 
     create() {
-        const portrait = this.portrait = this.scene.add.image(0, 0, 'portrait_effigie');
+        const portrait = this.portrait = this.scene.add.image(0, 0, 'portrait_gorilla');
         portrait.setPosition(418 / 2, 298 / 2);
         portrait.setScale(0.73);
         this.add(portrait);
 
-        // const portrait = this.portrait = this.scene.add.image(0, 0, 'portrait_effigie');
-        // portrait.setPosition(418 / 2, 298 / 2);
-        // portrait.setScale(0.73);
-        // this.add(portrait);
+        const part = this.part = this.scene.add.image(0, 0, 'brazo1');
+        part.setPosition(418 / 2, 298 / 2);
+        part.setScale(0.5);
+        this.add(part);
     }
 
     update() {

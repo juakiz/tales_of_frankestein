@@ -20,6 +20,23 @@ export default class Leg extends Phaser.GameObjects.Container {
         portrait.setPosition(418 / 2, 298 / 2);
         portrait.setScale(0.73);
         this.add(portrait);
+
+        const part = this.part = this.scene.add.image(0, 0, 'piernas');
+        part.setPosition(418 / 2, 298 / 2);
+        part.setScale(0.5);
+        this.add(part);
+
+        const buttonDer = this.buttonDer = this.scene.add.image(0, 0, 'boton_flechaderecha');
+        buttonDer.setPosition((418 / 2), 298 / 2);
+        buttonDer.setScale(0.4);
+        buttonDer.setOrigin(0, 0.5);
+        this.add(buttonDer);
+
+        const buttonIzq = this.buttonIzq = this.scene.add.image(0, 0, 'boton_flechaizquierda');
+        buttonIzq.setPosition((418 / 2) - 20, 298 / 2);
+        buttonIzq.setScale(0.4);
+        buttonIzq.setOrigin(1, 0.5);
+        this.add(buttonIzq);
     }
 
     update() {
