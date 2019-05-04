@@ -1,4 +1,5 @@
 import H from '../../../utils/helpers';
+import LegsGame from './legsGame';
 
 export default class Leg extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
@@ -20,6 +21,10 @@ export default class Leg extends Phaser.GameObjects.Container {
         portrait.setPosition(418 / 2, 298 / 2);
         portrait.setScale(0.73);
         this.add(portrait);
+        portrait.setInteractive();
+        portrait.on('pointerdown', () => {
+            this.head = new LegsGame(this.scene, this, 'LegsGame');
+        });
     }
 
     update() {

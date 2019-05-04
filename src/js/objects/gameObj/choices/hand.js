@@ -1,4 +1,5 @@
 import H from '../../../utils/helpers';
+import HeadGame from './headGame';
 
 export default class Hand extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
@@ -19,12 +20,12 @@ export default class Hand extends Phaser.GameObjects.Container {
         const portrait = this.portrait = this.scene.add.image(0, 0, 'portrait_effigie');
         portrait.setPosition(418 / 2, 298 / 2);
         portrait.setScale(0.73);
+        console.log(portrait);
         this.add(portrait);
-
-        // const portrait = this.portrait = this.scene.add.image(0, 0, 'portrait_effigie');
-        // portrait.setPosition(418 / 2, 298 / 2);
-        // portrait.setScale(0.73);
-        // this.add(portrait);
+        portrait.setInteractive();
+        portrait.on('pointerdown', () => {
+            this.head = new HeadGame(this.scene, this, 'HeadGame');
+        });
     }
 
     update() {

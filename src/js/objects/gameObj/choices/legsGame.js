@@ -1,6 +1,6 @@
-import H from '../utils/helpers';
+import H from '../../../utils/helpers';
 
-export default class LegsScreenCnt extends Phaser.GameObjects.Container {
+export default class LegsGame extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
         super(scene);
 
@@ -18,17 +18,20 @@ export default class LegsScreenCnt extends Phaser.GameObjects.Container {
     }
 
     create() {
-        const bg = this.bg = this.scene.add.graphics();
-        bg.fillStyle(0xffffaa, 1);
-        bg.fillRect(0, 0, 1280, 720);
+        const spider = this.scene.add.image(200 , 70, "spider");
+        const blood = this.scene.add.image(200 , 70, "blood");
+        const ship1 = this.scene.add.image(400 , 70, "ship");
+        const ship2 = this.scene.add.image(600 , 70, "ship");
+        const ship3 = this.scene.add.image(1000 , 70, "ship");
+        const ship4 = this.scene.add.image(700 , 70, "ship");
+        const ship5 = this.scene.add.image(300 , 70, "ship");
+        const back = this.scene.add.image(60 , 650, "back");
+        back.setScale(0.2);
+        back.setInteractive();
+        back.on('pointerdown', () => {
+            this.scene.scene.restart('GameScene');
+        });
         
-        const spider = this.scene.add.image(200 , 100, "spider");
-        const blood = this.scene.add.image(200 , 100, "blood");
-        const ship1 = this.scene.add.image(400 , 100, "ship");
-        const ship2 = this.scene.add.image(600 , 100, "ship");
-        const ship3 = this.scene.add.image(1000 , 100, "ship");
-        const ship4 = this.scene.add.image(700 , 100, "ship");
-        const ship5 = this.scene.add.image(300 , 100, "ship");
         ship1.alpha = 0; 
         ship2.alpha = 0; 
         ship3.alpha = 0; 
@@ -56,7 +59,7 @@ export default class LegsScreenCnt extends Phaser.GameObjects.Container {
         setTimeout(function(){ ship.alpha = 0; }, 1000);
         this.scene.tweens.add({ 
             targets: ship, 
-            y: 400, 
+            y: 350, 
             ease: 'Sine.easeInOut', 
             duration: 1000,
         });

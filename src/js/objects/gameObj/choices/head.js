@@ -1,4 +1,5 @@
 import H from '../../../utils/helpers';
+import ArmGame from './armGame';
 
 export default class Head extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
@@ -21,6 +22,10 @@ export default class Head extends Phaser.GameObjects.Container {
         portrait.setScale(0.73);
         this.add(portrait);
 
+        portrait.setInteractive();
+        portrait.on('pointerdown', () => {
+            this.head = new ArmGame(this.scene, this, 'ArmGame');
+        });
         // const cabeza = this.cabeza = this.scene.add.image(-15, 0, 'diseccion_cabeza');
         // cabeza.setOrigin(0.5, 1);
         // this.add(cabeza);

@@ -1,6 +1,6 @@
-import H from '../utils/helpers';
+import H from '../../../utils/helpers';
 
-export default class HeadScrnCnt extends Phaser.GameObjects.Container {
+export default class HeadGame extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
         super(scene);
 
@@ -23,16 +23,6 @@ export default class HeadScrnCnt extends Phaser.GameObjects.Container {
 
         machineChoise = this.getRandom(0,4);
         options = this.getAnswer(machineChoise);
-        const bg = this.bg = this.scene.add.graphics();
-        bg.fillStyle(0xffffaa, 1);
-        bg.fillRect(0, 0, 1280, 720);
-
-        // this.add(bg);
-        // this.add(title);
-        // this.add(playBtn);
-        // this.add(controls);
-        // this.add(credits);
-
         const playBtn0 = H.makeText(this.scene, 600, 250, this.questions[machineChoise], '30px');
 
 
@@ -52,6 +42,13 @@ export default class HeadScrnCnt extends Phaser.GameObjects.Container {
         playBtn3.setInteractive();
         playBtn3.on('pointerdown', () => {
           this.playUser(options[2], machineChoise);
+        });
+
+        const back = this.scene.add.image(60 , 650, "back");
+        back.setScale(0.2);
+        back.setInteractive();
+        back.on('pointerdown', () => {
+            this.scene.scene.restart('GameScene');
         });
     }
 

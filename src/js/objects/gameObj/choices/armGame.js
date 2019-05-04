@@ -1,6 +1,6 @@
-import H from '../utils/helpers';
+import H from '../../../utils/helpers';
 
-export default class MainScrnCnt extends Phaser.GameObjects.Container {
+export default class ArmGame extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
         super(scene);
 
@@ -11,17 +11,6 @@ export default class MainScrnCnt extends Phaser.GameObjects.Container {
     }
 
     create() {
-
-        const bg = this.bg = this.scene.add.graphics();
-        bg.fillStyle(0xffffaa, 1);
-        bg.fillRect(0, 0, 1280, 720);
-
-        this.add(bg);
-        this.add(title);
-        this.add(playBtn);
-        this.add(controls);
-        this.add(credits);
-
         const playBtn1 = H.makeText(this.scene, 200, 550, 'Piedra', '80px');
         playBtn1.setInteractive();
         playBtn1.on('pointerdown', () => {
@@ -41,6 +30,13 @@ export default class MainScrnCnt extends Phaser.GameObjects.Container {
         playBtn3.on('pointerdown', () => {
           console.log("asdsadsad")
           this.playUser(2);
+        });
+
+        const back = this.scene.add.image(60 , 650, "back");
+        back.setScale(0.2);
+        back.setInteractive();
+        back.on('pointerdown', () => {
+            this.scene.scene.restart('GameScene');
         });
     }
 
