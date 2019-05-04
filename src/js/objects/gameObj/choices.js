@@ -1,6 +1,6 @@
 import H from '../../utils/helpers';
-import Head from './choices/head';
 import Hand from './choices/hand';
+import Head from './choices/head';
 import Leg from './choices/leg';
 
 export default class ChoicesCnt extends Phaser.GameObjects.Container {
