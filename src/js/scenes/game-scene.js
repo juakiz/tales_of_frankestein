@@ -4,6 +4,8 @@ export default class GameScene extends Phaser.Scene {
   }
 
   create() {
+    const bg = this.bg = this.add.image(0, 0, 'fondo');
+    bg.setOrigin(0, 0);
   }
 
   update() {
