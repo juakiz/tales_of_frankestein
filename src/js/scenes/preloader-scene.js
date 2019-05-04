@@ -44,6 +44,10 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.setPath('src/assets/sprites/');
 
     this.load.image('fondo', 'fondo.jpg');
+    this.load.image('chains', 'chains.png');
+    this.load.image('shield', 'shield.png');
+    this.load.image('sword', 'sword.png');
+    this.load.image('titulo', 'titulo.png')
     // this.load.image('base_piedra', 'base_piedra.png');
     // this.load.spritesheet('pollo', 'pollo.png', { frameWidth: 87.5, frameHeight: 107 });
   }
