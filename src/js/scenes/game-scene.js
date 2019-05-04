@@ -1,3 +1,5 @@
+import H from '../utils/helpers';
+
 export default class GameScene extends Phaser.Scene {
   constructor() {
     super('GameScene');
