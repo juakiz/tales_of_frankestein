@@ -15,21 +15,32 @@ export default class MainScrnCnt extends Phaser.GameObjects.Container {
         bg.fillStyle(0xffffaa, 1);
         bg.fillRect(0, 0, 1280, 720);
 
-        const title = H.makeText(this.scene, 640, 100, 'Tales of Frankenstein');
-        const playBtn = H.makeText(this.scene, 640, 300, 'PLAY', '80px');
+        const title = this.title = this.scene.add.image(715, 150, 'titulo');
+        
+        const playBtn = H.makeText(this.scene, 640, 285, 'PLAY', '80px');
         playBtn.setInteractive();
         playBtn.on('pointerdown', () => {
             this.scene.scene.start('GameScene');
         });
+        const controlsBtn = H.makeText(this.scene, 640, 400, 'STORY', '80px');
+        controlsBtn.setInteractive();
+        controlsBtn.on('pointerdown', () => {
+            this.scene.controlsScrn.visible = true;
+        });
+        const creditsBtn = H.makeText(this.scene, 640, 515, 'CREDITS', '80px');
+        creditsBtn.setInteractive();
+        creditsBtn.on('pointerdown', () => {
+            console.log('hola');
+            this.scene.creditsScrn.visible = true;
+        });
 
-        const controls = H.makeText(this.scene, 640, 400, 'CONTROLS', '80px');
-        const credits = H.makeText(this.scene, 640, 500, 'CREDITS', '80px');
 
         this.add(bg);
         this.add(title);
         this.add(playBtn);
-        this.add(controls);
-        this.add(credits);
+        this.add(controlsBtn);
+        this.add(creditsBtn);
+        
     }
 
     update() {

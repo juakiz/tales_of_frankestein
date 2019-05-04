@@ -47,6 +47,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('chains', 'chains.png');
     this.load.image('shield', 'shield.png');
     this.load.image('sword', 'sword.png');
+    this.load.image('titulo', 'titulo.png')
 
     this.load.image('diseccion_brazo_der', 'diseccion_brazo_der.png');
     this.load.image('diseccion_brazo_izq', 'diseccion_brazo_izq.png');
@@ -54,15 +55,16 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('diseccion_piernas', 'diseccion_piernas.png');
     this.load.image('diseccion_torso', 'diseccion_torso.png');
 
-    this.load.image('diseccion_brazo_der', 'diseccion_brazo_der.png');
+    this.load.image('brazo1', 'brazo1.png');
     this.load.image('cabeza', 'cabeza.png');
-    this.load.image('diseccion_piernas', 'diseccion_piernas.png');
-    this.load.image('diseccion_torso', 'diseccion_torso.png');
+    this.load.image('piernas', 'piernas.png');
 
     this.load.image('portrait_effigie', 'portrait_effigie.png');
     this.load.image('portrait_gorilla', 'portrait_gorilla.png');
     this.load.image('portrait_spider', 'portrait_spider.png');
 
+    this.load.image('boton_flechaderecha', 'boton_flechaderecha.png');
+    this.load.image('boton_flechaizquierda', 'boton_flechaizquierda.png');
     this.load.image("ship", "ship.png");
     this.load.image("spider", "spider.png");
     this.load.image("blood", "sangre.png");
