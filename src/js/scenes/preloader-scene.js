@@ -64,6 +64,11 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.load.image('boton_flechaderecha', 'boton_flechaderecha.png');
     this.load.image('boton_flechaizquierda', 'boton_flechaizquierda.png');
+    this.load.image("ship", "ship.png");
+    this.load.image("spider", "spider.png");
+    this.load.image("blood", "sangre.png");
+    this.load.image("player", "player.png");
+
 
     // this.load.image('base_piedra', 'base_piedra.png');
     // this.load.spritesheet('pollo', 'pollo.png', { frameWidth: 87.5, frameHeight: 107 });
@@ -81,6 +86,7 @@ export default class PreloaderScene extends Phaser.Scene {
     //     zeroPad: 1,
     //   }),
     // });
+    
 
     [
       ['pollo', 1, 3],
