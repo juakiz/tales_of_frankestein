@@ -14,7 +14,7 @@ export default class PreloaderScene extends Phaser.Scene {
 
     var progressBg = this.add.graphics();
     progressBg.fillStyle(0x909090, 1);
-    progressBg.fillRect(90, 295, 620, 70);
+    progressBg.fillRect(90, 295, 1100, 70);
 
     var progress = this.add.graphics();
 
@@ -22,7 +22,7 @@ export default class PreloaderScene extends Phaser.Scene {
       // console.log(value);
         progress.clear();
         progress.fillStyle(0xffffff, 1);
-        progress.fillRect(100, 300, 600 * value, 60);
+        progress.fillRect(100, 300, 1080 * value, 60);
     });
 
     console.log(progress);

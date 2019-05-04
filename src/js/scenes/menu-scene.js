@@ -6,21 +6,21 @@ export default class MenuScene extends Phaser.Scene {
   create() {
     const bg = this.bg = this.add.graphics();
     bg.fillStyle(0xffffaa, 1);
-    bg.fillRect(0, 0, 800, 600);
+    bg.fillRect(0, 0, 1280, 720);
 
     // const bg = this.bg = this.add.graphics();
     // bg.fillStyle(0xffffaa, 1);
     // bg.fillRect(0, 0, 800, 600);
 
-    this.makeText(400, 100, 'Tales of Frankenstein');
-    const playBtn = this.makeText(400, 300, 'PLAY', '80px');
+    this.makeText(640, 100, 'Tales of Frankenstein');
+    const playBtn = this.makeText(640, 300, 'PLAY', '80px');
     playBtn.setInteractive();
     playBtn.on('pointerdown', () => {
       console.log('funciono');
     });
 
-    this.makeText(400, 400, 'CONTROLS', '80px');
-    this.makeText(400, 500, 'CREDITS', '80px');
+    this.makeText(640, 400, 'CONTROLS', '80px');
+    this.makeText(640, 500, 'CREDITS', '80px');
 
     // const pollo = this.add.sprite(100, 100, 'pollo', 5);
     // const pollo = this.add.sprite(100, 100);
