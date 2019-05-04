@@ -16,7 +16,7 @@ export default class MenuScene extends Phaser.Scene {
     const playBtn = this.makeText(640, 300, 'PLAY', '80px');
     playBtn.setInteractive();
     playBtn.on('pointerdown', () => {
-      console.log('funciono');
+      this.scene.start('ChoiceScene');
     });
 
     this.makeText(640, 400, 'CONTROLS', '80px');
