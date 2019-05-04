@@ -4,6 +4,7 @@ import Player from '../objects/gameObj/player';
 import Monster from '../objects/gameObj/monster';
 import Timer from '../objects/gameObj/timer';
 import Text from '../objects/gameObj/text';
+import H from '../utils/helpers';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
