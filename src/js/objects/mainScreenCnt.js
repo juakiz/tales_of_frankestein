@@ -30,9 +30,6 @@ export default class MainScrnCnt extends Phaser.GameObjects.Container {
         this.add(playBtn);
         this.add(controls);
         this.add(credits);
-        console.log(this)
-        const hola = this.scene.add.container();
-        console.log(hola)
     }
 
     update() {

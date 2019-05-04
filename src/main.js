@@ -6,7 +6,7 @@ import Game from './js/scenes/game-scene';
 import Choice from './js/scenes/choice-scene';
 
 
-console.log(window.innerWidth, window.innerHeight);
+// console.log(window.innerWidth, window.innerHeight);
 
 const config = {
   type: Phaser.AUTO,

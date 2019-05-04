@@ -25,7 +25,7 @@ export default class PreloaderScene extends Phaser.Scene {
         progress.fillRect(100, 300, 1080 * value, 60);
     });
 
-    console.log(progress);
+    // console.log(progress);
 
     const scene = this;
 
