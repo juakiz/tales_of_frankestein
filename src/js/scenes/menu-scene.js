@@ -14,7 +14,8 @@ export default class MenuScene extends Phaser.Scene {
 
     this.makeText(400, 100, 'Tales of Frankenstein');
     const playBtn = this.makeText(400, 300, 'PLAY', '80px');
-    playBtn.setInteractive().on('inputDown', () => {
+    playBtn.setInteractive();
+    playBtn.on('pointerdown', () => {
       console.log('funciono');
     });
 
