@@ -38,51 +38,14 @@ export default class PreloaderScene extends Phaser.Scene {
         // });
     });
 
-    this.load.audio('musicamenu', 'src/assets/OLD/music/Hearts_forged_with_fire.mp3');
+    this.load.audio('musicamenu', 'src/assets/music/menu_mas_elecciones.wav');
+    this.load.audio('musicapeligro', 'src/assets/music/musica_peligro.wav');
 
-    this.load.setPath('src/assets/OLD/sprites/');
+    this.load.setPath('src/assets/sprites/');
 
     this.load.image('fondo', 'fondo.jpg');
-    this.load.image('base_piedra', 'base_piedra.png');
-    this.load.image('piedra_1', 'piedra.png');
-    this.load.image('ui', 'ui.png');
-    this.load.image('torre_vikingos_cortada', 'torre_vikingos.png');
-    this.load.image('torre_alien', 'torre_alien.png');
-    this.load.image('rayo', 'rayo.png');
-    this.load.image('escudo', 'escudo.png');
-    this.load.image('empujd', 'empuje_drch.png');
-    this.load.image('empuji', 'empuje_izq.png');    
-    this.load.spritesheet('pollo', 'pollo.png', { frameWidth: 87.5, frameHeight: 107 });
-    this.load.spritesheet('slime', 'slime.png', { frameWidth: 875 / 6, frameHeight: 221 });
-    this.load.spritesheet('gusano', 'gusano.png', { frameWidth: 240.5, frameHeight: 212 });
-    this.load.spritesheet('vikingo1', 'vikingo-01.png', { frameWidth: 730 / 6, frameHeight: 115 });
-    this.load.spritesheet('vikingo2', 'vikingo-02.png', { frameWidth: 1226 / 6, frameHeight: 187 });
-    this.load.spritesheet('vikingo3', 'vikingo-03.png', { frameWidth: 1128 / 6, frameHeight: 207 });
-
-    this.load.image('menu', 'menu_juego.png');
-    this.load.image('start', 'start_oscuro.png');
-    this.load.image('instrucciones', 'instrucc_oscuro.png');
-    this.load.image('creditos', 'creditos_oscuro.png');
-    this.load.image('instruct_1', 'instruct_1.png');
-    this.load.image('instruct_2', 'instruct_2.png');
-    this.load.image('back', 'back.png');
-    this.load.image('next', 'next.png');
-    this.load.image('polloicon', 'pollo1.png');
-    this.load.image('polloicon1', 'pollo_oscuro.png');
-    this.load.image('gusanoicon', 'gusano1.png');
-    this.load.image('gusanoicon1', 'gusano_oscuro.png');
-    this.load.image('calaveraicon', 'calavera.png');
-    this.load.image('calaveraicon1', 'calavera_oscuro.png');
-    this.load.image('creditoscarg', 'creditos.jpg');
-    this.load.image('vikingo1c', 'vikingo1.png');
-    this.load.image('vikingo1o', 'vikingo1o.png');
-    this.load.image('vikingo2c', 'vikingo2.png');
-    this.load.image('vikingo2o', 'vikingo2o.png');
-    this.load.image('vikingo3c', 'vikingo3.png');
-    this.load.image('vikingo3o', 'vikingo3o.png');
-    this.load.image('aliens_win', 'aliens_win.png');
-    this.load.image('vikings_win', 'vikings_win.png');
-
+    // this.load.image('base_piedra', 'base_piedra.png');
+    // this.load.spritesheet('pollo', 'pollo.png', { frameWidth: 87.5, frameHeight: 107 });
   }
 
   create() {
@@ -100,11 +63,6 @@ export default class PreloaderScene extends Phaser.Scene {
 
     [
       ['pollo', 1, 3],
-      ['slime', 3, 4],
-      ['gusano', 1, 3],
-      ['vikingo1', 3, 5],
-      ['vikingo2', 3, 5],
-      ['vikingo3', 3, 5],
     ].forEach((el) => {
       // console.log(el);
       this.anims.create({
