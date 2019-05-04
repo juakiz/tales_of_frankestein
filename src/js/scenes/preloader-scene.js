@@ -10,7 +10,11 @@ export default class PreloaderScene extends Phaser.Scene {
   }
 
   preload() {
-    this.scale.on('resize', (gameSize, baseSize, displaySize, resolution) => { console.log(gameSize, baseSize, displaySize, resolution); });
+    // this.scale.on('resize', (gameSize, baseSize, displaySize, resolution) => { console.log(gameSize, baseSize, displaySize, resolution); });
+
+    var progressBg = this.add.graphics();
+    progressBg.fillStyle(0x909090, 1);
+    progressBg.fillRect(90, 295, 620, 70);
 
     var progress = this.add.graphics();
 
@@ -18,17 +22,20 @@ export default class PreloaderScene extends Phaser.Scene {
       // console.log(value);
         progress.clear();
         progress.fillStyle(0xffffff, 1);
-        progress.fillRect(0, 270, 1280 * value, 60);
+        progress.fillRect(100, 300, 600 * value, 60);
     });
+
+    console.log(progress);
 
     const scene = this;
 
     this.load.on('complete', () => {
-      this.input.on('pointerdown', () => {
+      // this.input.on('pointerdown', () => {
+          progressBg.destroy();
           progress.destroy();
-          scene.scale.startFullscreen();
-          this.scene.start('MenuScene');
-        });
+          // scene.scale.startFullscreen();
+          // this.scene.start('MenuScene');
+        // });
     });
 
     this.load.audio('musicamenu', 'src/assets/OLD/music/Hearts_forged_with_fire.mp3');
@@ -101,7 +108,7 @@ export default class PreloaderScene extends Phaser.Scene {
     ].forEach((el) => {
       // console.log(el);
       this.anims.create({
-        key: `${el[0]}Walk`,
+        key: el[0] + 'Walk',
         frames: this.anims.generateFrameNumbers(el[0], { start: 0, end: el[1] }),
         frameRate: 10,
         repeat: -1
@@ -129,6 +136,6 @@ export default class PreloaderScene extends Phaser.Scene {
     //   repeat: -1
     // });
     
-    // this.scene.start('MenuScene');
+    this.scene.start('MenuScene');
   }
 }
