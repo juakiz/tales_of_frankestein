@@ -19,7 +19,7 @@ export default class MainScrnCnt extends Phaser.GameObjects.Container {
         const playBtn = H.makeText(this.scene, 640, 300, 'PLAY', '80px');
         playBtn.setInteractive();
         playBtn.on('pointerdown', () => {
-            console.log('funciono');
+            this.scene.scene.start('GameScene');
         });
 
         const controls = H.makeText(this.scene, 640, 400, 'CONTROLS', '80px');

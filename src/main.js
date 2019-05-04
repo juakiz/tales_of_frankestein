@@ -3,7 +3,6 @@ import Phaser from 'phaser';
 import Preloader from './js/scenes/preloader-scene';
 import Menu from './js/scenes/menu-scene';
 import Game from './js/scenes/game-scene';
-import Choice from './js/scenes/choice-scene';
 
 
 // console.log(window.innerWidth, window.innerHeight);
@@ -25,7 +24,6 @@ const config = {
     Preloader,
     Menu,
     Game,
-    Choice,
   ]
 };
 
