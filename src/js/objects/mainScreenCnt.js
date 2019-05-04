@@ -20,6 +20,7 @@ export default class MainScrnCnt extends Phaser.GameObjects.Container {
         const playBtn = H.makeText(this.scene, 640, 285, 'PLAY', '80px');
         playBtn.setInteractive();
         playBtn.on('pointerdown', () => {
+            this.scene.scene.start('GameScene');
         });
         const controlsBtn = H.makeText(this.scene, 640, 400, 'STORY', '80px');
         controlsBtn.setInteractive();
@@ -29,6 +30,7 @@ export default class MainScrnCnt extends Phaser.GameObjects.Container {
         const creditsBtn = H.makeText(this.scene, 640, 515, 'CREDITS', '80px');
         creditsBtn.setInteractive();
         creditsBtn.on('pointerdown', () => {
+            console.log('hola');
             this.scene.creditsScrn.visible = true;
         });
 

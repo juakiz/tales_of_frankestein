@@ -27,9 +27,7 @@ export default class MenuScene extends Phaser.Scene {
     // mainsScrn.alpha = 0.5;
     // this.menuView = this.add.container();
     // this.mainsScrn = new MainScreenCnt(this, this.menuView, 'MainScreen');
-    this.menuView = this.add.container();
-    // this.mainsScrn = new MainScreenCnt(this, this.menuView, 'MainScreen');
-    this.mainsScrn = new LegsScreenCnt(this, this.menuView, 'LegsScreen');
+    // this.mainsScrn = new LegsScreenCnt(this, this.menuView, 'LegsScreen');
   }
 
   update() {
