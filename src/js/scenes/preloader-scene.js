@@ -64,6 +64,7 @@ export default class PreloaderScene extends Phaser.Scene {
     //     zeroPad: 1,
     //   }),
     // });
+    
 
     [
       ['pollo', 1, 3],
@@ -98,6 +99,7 @@ export default class PreloaderScene extends Phaser.Scene {
     //   repeat: -1
     // });
     
+    //this.scene.start('GameScene');
     this.scene.start('MenuScene');
   }
 }
