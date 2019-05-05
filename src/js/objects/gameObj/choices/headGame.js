@@ -57,7 +57,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
         this.scene.text.show();
 
         playBtn1.on('pointerdown', () => {
-            if (this.scene.monster.esfinje.visible) this.playUser(options[0], machineChoise);
+            if (this.scene.monster.esfinje && this.scene.monster.esfinje.visible) this.playUser(options[0], machineChoise);
             this.scene.tweens.add({
                 targets: [PC.button1, playBtn1],
                 scaleX: '-=0.2',
@@ -68,7 +68,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
         });
 
         playBtn2.on('pointerdown', () => {
-          if (this.scene.monster.esfinje.visible) this.playUser(options[1], machineChoise);
+          if (this.scene.monster.esfinje && this.scene.monster.esfinje.visible) this.playUser(options[1], machineChoise);
             this.scene.tweens.add({
                 targets: [PC.button2, playBtn2],
                 scaleX: '-=0.2',
@@ -79,7 +79,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
         });
 
         playBtn3.on('pointerdown', () => {
-          if (this.scene.monster.esfinje.visible) this.playUser(options[2], machineChoise);
+          if (this.scene.monster.esfinje && this.scene.monster.esfinje.visible) this.playUser(options[2], machineChoise);
             this.scene.tweens.add({
                 targets: [PC.button3, playBtn3],
                 scaleX: '-=0.2',
