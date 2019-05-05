@@ -38,7 +38,7 @@ export default class Timer extends Phaser.GameObjects.Container {
         this.timerEvent = this.scene.time.addEvent({
             delay: 1000,
             callback: (secs) => {
-                console.log(this.seconds);
+                // console.log(this.seconds);
                 if (this.seconds > 0) {
                     this.seconds--;
                     this.setTime(this.seconds);

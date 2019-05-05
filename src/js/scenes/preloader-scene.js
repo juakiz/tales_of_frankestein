@@ -72,6 +72,14 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.load.image('marco', 'marco.png');
 
+    this.load.image('gorilla_body', 'gorilla_body.png');
+    this.load.image('gorilla_lengua_pezon', 'gorilla_lengua_pezon.png');
+    this.load.image('gorilla_lengua_sexy', 'gorilla_lengua_sexy.png');
+    this.load.image('gorilla_papel', 'gorilla_papel.png');
+    this.load.image('gorilla_piedra', 'gorilla_piedra.png');
+    this.load.image('gorilla_tijera', 'gorilla_tijera.png');
+
+
     this.load.image("ship", "ship.png");
     this.load.image("spider", "spider.png");
     this.load.image("blood", "sangre.png");

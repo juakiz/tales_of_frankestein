@@ -22,7 +22,6 @@ export default class Hand extends Phaser.GameObjects.Container {
         const portrait = this.portrait = this.scene.add.image(0, 0, 'portrait_gorilla');
         portrait.setPosition(418 / 2, 298 / 2);
         portrait.setScale(0.73);
-        console.log(portrait);
         this.add(portrait);
 
         portrait.setInteractive();
