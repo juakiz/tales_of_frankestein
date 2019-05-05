@@ -19,7 +19,7 @@ export default class Text extends Phaser.GameObjects.Container {
         this.add(bg);
 
         const sentence = 'Prueba prueba prueba\nPrueba prueba\nPrueba pruebaprueba prueba';
-        const text = this.text = H.makeText(this.scene, 0, 0, sentence, '42px');
+        const text = this.text = H.makeText(this.scene, 0, 0, sentence, '42px', '#FFFFFF');
         this.add(text);
 
         this.x = H.WIDTH + this.bg.displayHeight;
