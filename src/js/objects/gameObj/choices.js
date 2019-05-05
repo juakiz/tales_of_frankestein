@@ -73,6 +73,7 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
                 this.scene.text.setText('Te has\npasado\nel juego', '94px');
                 this.scene.input.on('pointerdown', () => {
                     this.scene.scene.start('MenuScene');
+                    this.scene.musica.stop();
                 })
             } else {
                 this.scene.text.setText('Elige un\nmiembro', '94px');

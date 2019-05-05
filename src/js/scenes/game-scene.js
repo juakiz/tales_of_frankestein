@@ -12,6 +12,9 @@ export default class GameScene extends Phaser.Scene {
   }
 
   create() {
+    const music = this.musica = this.sound.add('musicamenu', { loop: true });
+    music.play({ loop: true });
+
     this.ee = this.sys.events;
     this.ee.on('countdown', () => { console.log('countdown!!'); });
 

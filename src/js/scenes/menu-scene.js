@@ -8,8 +8,7 @@ export default class MenuScene extends Phaser.Scene {
   }
 
   create() {
-    const music = this.sound.add('musicamenu', { loop: true });
-    music.play({ loop: true });
+
 
 
     // const sword = this.add.image(100, 200, 'atlas', 'Sword');
