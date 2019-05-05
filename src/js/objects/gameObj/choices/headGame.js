@@ -109,10 +109,17 @@ export default class HeadGame extends Phaser.GameObjects.Container {
             this.scene.text.hide();
             this.scene.text.setText('WIN', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.defeatedBoss('head');
+                this.scene.choices.showParts();
+            }, 1200);
         }else{
             this.scene.text.hide();
             this.scene.text.setText('LOST', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.showPortraits();
+            }, 1200);
         } 
       }
       if(question == 1){//la pregunta
@@ -120,10 +127,17 @@ export default class HeadGame extends Phaser.GameObjects.Container {
             this.scene.text.hide();
             this.scene.text.setText('WIN', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.defeatedBoss('head');
+                this.scene.choices.showParts();
+            }, 1200);
         }else{
             this.scene.text.hide();
             this.scene.text.setText('LOST', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.showPortraits();
+            }, 1200);
         } 
       }
       if(question == 2){//la pregunta
@@ -131,10 +145,17 @@ export default class HeadGame extends Phaser.GameObjects.Container {
             this.scene.text.hide();
             this.scene.text.setText('WIN', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.defeatedBoss('head');
+                this.scene.choices.showParts();
+            }, 1200);
         }else{
             this.scene.text.hide();
             this.scene.text.setText('LOST', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.showPortraits();
+            }, 1200);
         } 
       }
       if(question == 3){//la pregunta
@@ -142,10 +163,17 @@ export default class HeadGame extends Phaser.GameObjects.Container {
             this.scene.text.hide();
             this.scene.text.setText('WIN', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.defeatedBoss('head');
+                this.scene.choices.showParts();
+            }, 1200);
         }else{
             this.scene.text.hide();
             this.scene.text.setText('LOST', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.showPortraits();
+            }, 1200);
         } 
       }
       if(question == 4){//la pregunta
@@ -153,10 +181,17 @@ export default class HeadGame extends Phaser.GameObjects.Container {
             this.scene.text.hide();
             this.scene.text.setText('WIN', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.defeatedBoss('head');
+                this.scene.choices.showParts();
+            }, 1200);
         }else{
             this.scene.text.hide();
             this.scene.text.setText('LOST', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.showPortraits();
+            }, 1200);
         } 
       }
     }

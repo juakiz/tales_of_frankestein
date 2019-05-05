@@ -89,4 +89,12 @@ export default class Monster extends Phaser.GameObjects.Container {
         });
     }
 
+    hideMonster(){
+        this.monkey.visible = false;
+        this.monkey_hand.visible = false;
+        this.monkey_papel.visible = false;
+        this.monkey_tijera.visible = false;
+        this.esfinje.visible = false;
+    }
+
 }

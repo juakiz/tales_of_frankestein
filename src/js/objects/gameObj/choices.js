@@ -54,11 +54,17 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
 
     // PARTS
     showParts() {
+        //this.scene.text.hide();
+        //this.scene.monster.
         this.hideMembers();
         this.members.forEach((el) => {
             if (!el.selectedPart) el.show('part');
             else el.hide();
         });
+        setTimeout(() => {
+            this.scene.text.setText('Elige un\nmiembro', '94px');
+            this.scene.text.show();
+        }, 200);
     }
 
     selectPart(part) {
@@ -70,6 +76,7 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
 
     // BOSSES
     showPortraits() {
+        this.scene.text.hide();
         this.hideMembers();
         this.members.forEach((el) => { if (!el.defeatedBoss) el.show('portrait'); });
         setTimeout(() => {

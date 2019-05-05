@@ -29,16 +29,26 @@ export default class ArmGame extends Phaser.GameObjects.Container {
             this.scene.text.hide();
             this.scene.text.setText('LOST', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.showPortraits();
+            }, 1200);
         }else{
             if(options[machineChoise] == 2){
                 this.scene.text.hide();
                 this.scene.text.setText('WIN', '140px');
                 this.scene.text.show();
+                setTimeout(() => {
+                    this.scene.choices.defeatedBoss('hand');
+                    this.scene.choices.showParts();
+                }, 1200);
             }else{
                 if(options[machineChoise] == 0){
                     this.scene.text.hide();
                     this.scene.text.setText('DRAW', '140px');
                     this.scene.text.show();
+                    setTimeout(() => {
+                        this.scene.choices.showPortraits();
+                    }, 1200);
                 }
             }
         } 
@@ -48,16 +58,26 @@ export default class ArmGame extends Phaser.GameObjects.Container {
             this.scene.text.hide();
             this.scene.text.setText('LOST', '140px');
             this.scene.text.show();
+            setTimeout(() => {
+                this.scene.choices.showPortraits();
+            }, 1200);
         }else{
             if(options[machineChoise] == 0){
                 this.scene.text.hide();
                 this.scene.text.setText('WIN', '140px');
                 this.scene.text.show();
+                setTimeout(() => {
+                    this.scene.choices.defeatedBoss('hand');
+                    this.scene.choices.showParts();
+                }, 1200);
             }else{
                 if(options[machineChoise] == 1){
                     this.scene.text.hide();
                     this.scene.text.setText('DRAW', '140px');
                     this.scene.text.show();
+                    setTimeout(() => {
+                        this.scene.choices.showPortraits();
+                    }, 1200);
                 }
             }
         }
@@ -68,17 +88,26 @@ export default class ArmGame extends Phaser.GameObjects.Container {
                this.scene.text.hide();
                this.scene.text.setText('WIN', '140px');
                this.scene.text.show();
-      
+               setTimeout(() => {
+                this.scene.choices.defeatedBoss('hand');
+                this.scene.choices.showParts();
+               }, 1200);
           }else{
               if(options[machineChoise] == 0){
                 this.scene.text.hide();
                 this.scene.text.setText('LOST', '140px');
                 this.scene.text.show();
+                setTimeout(() => {
+                    this.scene.choices.showPortraits();
+                }, 1200);
               }else{
                   if(options[machineChoise] == 2) {
                     this.scene.text.hide();
                     this.scene.text.setText('DRAW', '140px');
                     this.scene.text.show();
+                    setTimeout(() => {
+                        this.scene.choices.showPortraits();
+                    }, 1200);
                   }
               }
           }

@@ -44,6 +44,7 @@ export default class Timer extends Phaser.GameObjects.Container {
                     this.setTime(this.seconds);
                 } else {
                     console.log('FIN DEL TIMER');
+                    this.scene.choices.showPortraits();
                 }
             },
             args: [secs],
