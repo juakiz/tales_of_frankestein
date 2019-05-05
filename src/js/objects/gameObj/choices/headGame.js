@@ -137,6 +137,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 setTimeout(() => {
                     this.scene.choices.defeatedBoss('head');
                     this.scene.choices.showParts();
+                    this.scene.monster.esfinje.visible = false;
                 }, 1200);
             } else {
                 this.scene.text.hide();
@@ -144,6 +145,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 this.scene.text.show();
                 setTimeout(() => {
                     this.scene.choices.showPortraits();
+                    this.scene.monster.esfinje.visible = false;
                 }, 1200);
             }
         }
@@ -155,6 +157,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 setTimeout(() => {
                     this.scene.choices.defeatedBoss('head');
                     this.scene.choices.showParts();
+                    this.scene.monster.esfinje.visible = false;
                 }, 1200);
             } else {
                 this.scene.text.hide();
@@ -162,6 +165,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 this.scene.text.show();
                 setTimeout(() => {
                     this.scene.choices.showPortraits();
+                    this.scene.monster.esfinje.visible = false;
                 }, 1200);
             }
         }
@@ -173,6 +177,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 setTimeout(() => {
                     this.scene.choices.defeatedBoss('head');
                     this.scene.choices.showParts();
+                    this.scene.monster.esfinje.visible = false;
                 }, 1200);
             } else {
                 this.scene.text.hide();
@@ -180,6 +185,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 this.scene.text.show();
                 setTimeout(() => {
                     this.scene.choices.showPortraits();
+                    this.scene.monster.esfinje.visible = false;
                 }, 1200);
             }
         }
@@ -191,6 +197,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 setTimeout(() => {
                     this.scene.choices.defeatedBoss('head');
                     this.scene.choices.showParts();
+                    this.scene.monster.esfinje.visible = false;
                 }, 1200);
             } else {
                 this.scene.text.hide();
@@ -198,6 +205,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 this.scene.text.show();
                 setTimeout(() => {
                     this.scene.choices.showPortraits();
+                    this.scene.monster.esfinje.visible = false;
                 }, 1200);
             }
         }
@@ -209,6 +217,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 setTimeout(() => {
                     this.scene.choices.defeatedBoss('head');
                     this.scene.choices.showParts();
+                    this.scene.monster.esfinje.visible = false;
                 }, 1200);
             } else {
                 this.scene.text.hide();
@@ -216,6 +225,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 this.scene.text.show();
                 setTimeout(() => {
                     this.scene.choices.showPortraits();
+                    this.scene.monster.esfinje.visible = false;
                 }, 1200);
             }
         }

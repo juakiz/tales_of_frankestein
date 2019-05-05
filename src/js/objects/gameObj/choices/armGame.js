@@ -31,6 +31,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
             this.scene.text.show();
             setTimeout(() => {
                 this.scene.choices.showPortraits();
+                this.resetGame();
             }, 1200);
         }else{
             if(options[machineChoise] == 2){
@@ -40,6 +41,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
                 setTimeout(() => {
                     this.scene.choices.defeatedBoss('hand');
                     this.scene.choices.showParts();
+                    this.resetGame();
                 }, 1200);
             }else{
                 if(options[machineChoise] == 0){
@@ -48,6 +50,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
                     this.scene.text.show();
                     setTimeout(() => {
                         this.scene.choices.showPortraits();
+                        this.resetGame();
                     }, 1200);
                 }
             }
@@ -60,6 +63,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
             this.scene.text.show();
             setTimeout(() => {
                 this.scene.choices.showPortraits();
+                this.resetGame();
             }, 1200);
         }else{
             if(options[machineChoise] == 0){
@@ -69,6 +73,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
                 setTimeout(() => {
                     this.scene.choices.defeatedBoss('hand');
                     this.scene.choices.showParts();
+                    this.resetGame();
                 }, 1200);
             }else{
                 if(options[machineChoise] == 1){
@@ -77,6 +82,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
                     this.scene.text.show();
                     setTimeout(() => {
                         this.scene.choices.showPortraits();
+                        this.resetGame();
                     }, 1200);
                 }
             }
@@ -91,6 +97,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
                setTimeout(() => {
                 this.scene.choices.defeatedBoss('hand');
                 this.scene.choices.showParts();
+                this.resetGame();
                }, 1200);
           }else{
               if(options[machineChoise] == 0){
@@ -99,6 +106,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
                 this.scene.text.show();
                 setTimeout(() => {
                     this.scene.choices.showPortraits();
+                    this.resetGame();
                 }, 1200);
               }else{
                   if(options[machineChoise] == 2) {
@@ -107,11 +115,21 @@ export default class ArmGame extends Phaser.GameObjects.Container {
                     this.scene.text.show();
                     setTimeout(() => {
                         this.scene.choices.showPortraits();
+                        this.resetGame();
                     }, 1200);
                   }
               }
           }
       }
+    }
+
+    resetGame(){
+        this.scene.monster.monkey.visible = false;
+        this.scene.monster.monkey_hand.visible = false;
+        this.scene.monster.monkey_papel.visible = false;
+        this.scene.monster.monkey_tijera.visible = false;
+        this.scene.player.papel.visible = false;
+        this.scene.player.tijeras.visible = false;
     }
 
     update() {
