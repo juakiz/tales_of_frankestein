@@ -7,11 +7,11 @@ export default class HeadGame extends Phaser.GameObjects.Container {
         if (parent) parent.add(this);
         this.name = name;
         this.questions = [
-            '¿Que ser que camina sobre la tierra lo hace \n  primero a cuatro patas, después a dos y luego,\n cuando se vuelve débil utiliza tres patas?', 
-            'Ponerme de lado y seré todo, \n cortarme a la mitad y seré nada \n ¿Que soy?', 
-            '¿Qué sigue en esta secuencia de números:\n 1, 11, 21, 1211, 111221, 312211, ...?',
-            '¿Qué es aquello que te pertenece, pero \n el resto de personas lo usan más que tu?',
-            '¿Cual es el oceano más tranquilo?'
+            '¿Que ser que camina sobre\nla tierra lo hace primero\na 4 patas, después a 2\ny luego,cuando se vuelve\ndébil utiliza 3 patas?', 
+            'Ponerme de lado y seré\ntodo, cortarme a la mitad\ny seré nada  ¿Que soy?', 
+            '¿Qué sigue en esta\nsecuencia de números:\n1, 11, 21, 1211,\n111221, 312211, ...?',
+            '¿Qué es aquello que\nte pertenece, pero\nel resto  de personas\nlo usan más que tu?',
+            '¿Cual es el oceano\nmás tranquilo?'
         ];
         this.create();
     }
@@ -20,36 +20,38 @@ export default class HeadGame extends Phaser.GameObjects.Container {
     create() {
         var machineChoise;
         var options;
-
+        this.scene.choices.head.show('buttons');
         machineChoise = this.getRandom(0,4);
         options = this.getAnswer(machineChoise);
-        const playBtn0 = H.makeText(this.scene, 600, 250, this.questions[machineChoise], '30px');
 
-
-        const playBtn1 = H.makeText(this.scene, 200, 550, options[0], '40px');
+        this.scene.text.hide();
+        this.scene.text.setText(this.questions[machineChoise], '40px');
+        this.scene.text.show();
+        
+        const playBtn1 = H.makeText(this.scene, 640, 455, options[0], '40px');
         playBtn1.setInteractive();
         playBtn1.on('pointerdown', () => {
           this.playUser(options[0], machineChoise);
         });
 
-        const playBtn2 = H.makeText(this.scene, 600, 550, options[1], '40px');
+        const playBtn2 = H.makeText(this.scene, 640, 555, options[1], '40px');
         playBtn2.setInteractive();
         playBtn2.on('pointerdown', () => {
           this.playUser(options[1], machineChoise);
         });
 
-        const playBtn3 = H.makeText(this.scene, 1000, 550, options[2], '40px');
+        const playBtn3 = H.makeText(this.scene, 640, 655, options[2], '40px');
         playBtn3.setInteractive();
         playBtn3.on('pointerdown', () => {
           this.playUser(options[2], machineChoise);
         });
 
-        const back = this.scene.add.image(60 , 650, "back");
-        back.setScale(0.2);
-        back.setInteractive();
-        back.on('pointerdown', () => {
-            this.scene.scene.restart('GameScene');
-        });
+        // const back = this.scene.add.image(60 , 650, "back");
+        // back.setScale(0.2);
+        // back.setInteractive();
+        // back.on('pointerdown', () => {
+        //     this.scene.scene.restart('GameScene');
+        // });
     }
 
     getAnswer(question){
@@ -71,37 +73,57 @@ export default class HeadGame extends Phaser.GameObjects.Container {
       console.log('MAQUINA: '+this.questions[question]);
       if(question == 0){//la pregunta
         if(option == "Humano"){//la repuesta eleguida
-            console.log('WIN!');
+            this.scene.text.hide();
+            this.scene.text.setText('WIN', '140px');
+            this.scene.text.show();
         }else{
-            console.log('LOST!');
+            this.scene.text.hide();
+            this.scene.text.setText('LOST', '140px');
+            this.scene.text.show();
         } 
       }
       if(question == 1){//la pregunta
         if(option == "El número 8"){//la repuesta eleguida
-            console.log('WIN!');
+            this.scene.text.hide();
+            this.scene.text.setText('WIN', '140px');
+            this.scene.text.show();
         }else{
-            console.log('LOST!');
+            this.scene.text.hide();
+            this.scene.text.setText('LOST', '140px');
+            this.scene.text.show();
         } 
       }
       if(question == 2){//la pregunta
         if(option == "1"){//la repuesta eleguida
-            console.log('WIN!');
+            this.scene.text.hide();
+            this.scene.text.setText('WIN', '140px');
+            this.scene.text.show();
         }else{
-            console.log('LOST!');
+            this.scene.text.hide();
+            this.scene.text.setText('LOST', '140px');
+            this.scene.text.show();
         } 
       }
       if(question == 3){//la pregunta
         if(option == "Tu nombre"){//la repuesta eleguida
-            console.log('WIN!');
+            this.scene.text.hide();
+            this.scene.text.setText('WIN', '140px');
+            this.scene.text.show();
         }else{
-            console.log('LOST!');
+            this.scene.text.hide();
+            this.scene.text.setText('LOST', '140px');
+            this.scene.text.show();
         } 
       }
       if(question == 4){//la pregunta
         if(option == "El pacífico"){//la repuesta eleguida
-            console.log('WIN!');
+            this.scene.text.hide();
+            this.scene.text.setText('WIN', '140px');
+            this.scene.text.show();
         }else{
-            console.log('LOST!');
+            this.scene.text.hide();
+            this.scene.text.setText('LOST', '140px');
+            this.scene.text.show();
         } 
       }
     }

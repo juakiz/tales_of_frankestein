@@ -25,12 +25,6 @@ export default class LegsGame extends Phaser.GameObjects.Container {
         const ship3 = this.scene.add.image(1000 , 70, "ship");
         const ship4 = this.scene.add.image(700 , 70, "ship");
         const ship5 = this.scene.add.image(300 , 70, "ship");
-        const back = this.scene.add.image(60 , 650, "back");
-        back.setScale(0.2);
-        back.setInteractive();
-        back.on('pointerdown', () => {
-            this.scene.scene.restart('GameScene');
-        });
         
         ship1.alpha = 0; 
         ship2.alpha = 0; 
@@ -38,6 +32,7 @@ export default class LegsGame extends Phaser.GameObjects.Container {
         ship4.alpha = 0; 
         ship5.alpha = 0; 
         blood.alpha = 0;
+
         this.spiderMove(spider);
         const _this = this
         setTimeout(function(){_this.throughtMove(ship1);}, 1500);
@@ -45,10 +40,14 @@ export default class LegsGame extends Phaser.GameObjects.Container {
         setTimeout(function(){ _this.throughtMove(ship3); }, 3000);
         setTimeout(function(){ _this.throughtMove(ship4); }, 4000);
         setTimeout(function(){ _this.throughtMove(ship5); }, 4600);
-        setTimeout(function(){ 
-            spider.alpha = 0; 
-            blood.alpha = 1; 
-        }, 5000);
+        setTimeout(function(){ spider.alpha = 0; blood.alpha = 1; }, 5000);
+
+        const back = this.scene.add.image(60 , 650, "back");
+        back.setScale(0.2);
+        back.setInteractive();
+        back.on('pointerdown', () => {
+            this.scene.scene.restart('GameScene');
+        });
     }
 
     update() {

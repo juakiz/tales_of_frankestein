@@ -2,30 +2,30 @@ const Helpers = {
     WIDTH: 1280,
     HEIGHT: 720,
     makeText: function (scene, x, y, text, size = '60px') {
-        var config = {
-          x: x,
-          y: y,
-          text,
-          style: {
-            fontSize: size,
-            fontFamily: 'credits',
-            color: '#000000',
-            align: 'center',
-            shadow: {
-              color: '#606060',
-              fill: true,
-              offsetX: 2,
-              offsetY: 2,
-              // blur: 8
-            }
+      var config = {
+        x: x,
+        y: y,
+        text,
+        style: {
+          fontSize: size,
+          fontFamily: 'credits',
+          color: '#000000',
+          align: 'center',
+          shadow: {
+            color: '#606060',
+            fill: true,
+            offsetX: 2,
+            offsetY: 2,
+            // blur: 8
           }
-        };
-    
-        const textObj = scene.make.text(config);
-        textObj.setOrigin(0.5, 0.5);
-    
-        return textObj;
+        }
       }
+      
+      const textObj = scene.make.text(config);
+      textObj.setOrigin(0.5, 0.5);
+      
+      return textObj;
+    }
 };
 
 export default Helpers;

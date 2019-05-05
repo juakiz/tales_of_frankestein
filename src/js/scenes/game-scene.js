@@ -23,8 +23,8 @@ export default class GameScene extends Phaser.Scene {
     // this.timer.countdown(15);
     this.text = new Text(this, this.gameView, 'Text');
     // this.text.hide();
-    // this.text.setText('Hola', '140px');
-    // this.text.show();
+    this.text.setText('Elige un\nmiembro', '94px');
+    this.text.show();
   }
 
   update() {
