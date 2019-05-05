@@ -45,6 +45,13 @@ export default class Hand extends Phaser.GameObjects.Container {
         buttonPiedra.setInteractive();
         buttonPiedra.on('pointerdown', () => {
             this.miniGame.playUser(0);
+            this.scene.tweens.add({
+                targets: buttonPiedra,
+                scaleX: '-=0.1',
+                scaleY: '-=0.1',
+                duration: 50,
+                yoyo: true
+              });
         });
 
         const buttonPapel = this.buttonPapel = this.scene.add.image(0, 0, 'boton_papel');
@@ -54,6 +61,13 @@ export default class Hand extends Phaser.GameObjects.Container {
         buttonPapel.setInteractive();
         buttonPapel.on('pointerdown', () => {
             this.miniGame.playUser(1);
+            this.scene.tweens.add({
+                targets: buttonPapel,
+                scaleX: '-=0.1',
+                scaleY: '-=0.1',
+                duration: 50,
+                yoyo: true
+              });
         });
 
         const buttonTijera = this.buttonTijera = this.scene.add.image(0, 0, 'boton_tijera');
@@ -63,6 +77,13 @@ export default class Hand extends Phaser.GameObjects.Container {
         buttonTijera.setInteractive();
         buttonTijera.on('pointerdown', () => {
             this.miniGame.playUser(2);
+            this.scene.tweens.add({
+                targets: buttonTijera,
+                scaleX: '-=0.1',
+                scaleY: '-=0.1',
+                duration: 50,
+                yoyo: true
+              });
         });
 
         this.buttons.push(buttonPiedra);

@@ -92,7 +92,7 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
 
     // CONTROLS
     showControls() {
-        this.scene.timer.countdown(15);
+        this.scene.timer.countdown(5);
         this.scene.text.hide();
         this.hideMembers();
         this.members.forEach((el) => {
