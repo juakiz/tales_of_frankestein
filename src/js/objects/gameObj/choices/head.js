@@ -27,6 +27,7 @@ export default class Head extends Phaser.GameObjects.Container {
 
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
+            this.miniGame.changeQuestion();
             this.miniGame.play();
             this.parentContainer.showControls();
             this.scene.monster.rabit();

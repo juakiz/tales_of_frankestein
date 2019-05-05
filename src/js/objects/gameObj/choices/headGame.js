@@ -40,6 +40,15 @@ export default class HeadGame extends Phaser.GameObjects.Container {
         this.buttons.forEach(el => el.visible = false);
     }
 
+    changeQuestion() {
+        var machineChoise = this.machineChoise = this.getRandom(0, 4);
+        var options = this.options = this.getAnswer(machineChoise);
+        console.log("CHANGEEEEE: "+machineChoise);
+        this.playBtn1.setText(options[0]);
+        this.playBtn2.setText(options[1]);
+        this.playBtn3.setText(options[2]);
+    }
+
     play() {
         const {
             playBtn1,
@@ -52,6 +61,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
 
         this.buttons.forEach(el => el.visible = false);
 
+        console.log("PLAY: "+machineChoise);
         this.scene.text.hide();
         this.scene.text.setText(this.questions[machineChoise], '40px');
         this.scene.text.show();
