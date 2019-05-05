@@ -1,5 +1,5 @@
 import H from '../../../utils/helpers';
-import ArmGame from './armGame';
+import HeadGame from './headGame';
 
 export default class Head extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
