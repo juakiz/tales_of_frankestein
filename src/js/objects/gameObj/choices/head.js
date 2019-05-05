@@ -27,7 +27,7 @@ export default class Head extends Phaser.GameObjects.Container {
 
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
-            this.head = new HeadGame(this.scene, this, 'HeadGame');
+            this.miniGame.play();
             this.parentContainer.showControls();
             this.scene.monster.esfinje();
         });
@@ -71,18 +71,22 @@ export default class Head extends Phaser.GameObjects.Container {
         this.buttons.push(button1);
         this.buttons.push(button2);
         this.buttons.push(button3);
+
+        this.miniGame = new HeadGame(this.scene, this, 'HeadGame');
     }
 
     show(element) {
         this.portrait.visible = element === 'portrait';
         this.part.visible = element === 'part';
-        this.buttons.forEach(el => el.visible = element === 'buttons');
+        this.buttons.forEach(el => { el.visible = element === 'buttons'; });
+        this.miniGame.buttons.forEach(el => { el.visible = element === 'buttons'; });
     }
 
     hide() {
         this.portrait.visible = false;
         this.part.visible = false;
         this.buttons.forEach(el => el.visible = false);
+        this.miniGame.buttons.forEach(el => { el.visible = false; });
     }
 
     update() {

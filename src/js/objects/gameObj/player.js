@@ -8,9 +8,9 @@ export default class Player extends Phaser.GameObjects.Container {
         this.name = name;
 
         this.x = 100;
-        this.y = 388;
+        this.y = 415;
 
-        this.setScale(0.4);
+        this.setScale(0.45);
 
         this.create();
 
@@ -38,10 +38,10 @@ export default class Player extends Phaser.GameObjects.Container {
         this.add(torso);
         this.add(brazo_der);
         
-        leg.visible = false;
-        head.visible = false;
-        brazo_der.visible = false;
-        brazo_izq.visible = false;
+        // leg.visible = false;
+        // head.visible = false;
+        // brazo_der.visible = false;
+        // brazo_izq.visible = false;
     }
 
     show(part) {

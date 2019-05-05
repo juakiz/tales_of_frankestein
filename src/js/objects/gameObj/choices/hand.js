@@ -1,5 +1,5 @@
 import H from '../../../utils/helpers';
-import ArmGame from './armGame';
+import HeadGame from './headGame';
 
 export default class Hand extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
@@ -23,12 +23,9 @@ export default class Hand extends Phaser.GameObjects.Container {
         portrait.setPosition(418 / 2, 298 / 2);
         portrait.setScale(0.73);
         this.add(portrait);
-
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
-            this.hand = new ArmGame(this.scene, this, 'ArmGame');
-            this.parentContainer.showControls();
-            this.scene.monster.monkey();
+            this.head = new HeadGame(this.scene, this, 'HeadGame');
         });
 
         const part = this.part = this.scene.add.image(0, 0, 'boton_seleccion_brazo');
@@ -37,7 +34,6 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(part);
         part.setInteractive();
         part.on('pointerdown', () => {
-            this.parentContainer.selectPart('hand');
         });
 
         const buttonPiedra = this.buttonPiedra = this.scene.add.image(0, 0, 'boton_piedra');
@@ -46,7 +42,6 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonPiedra);
         buttonPiedra.setInteractive();
         buttonPiedra.on('pointerdown', () => {
-            this.hand.playUser(0);
         });
 
         const buttonPapel = this.buttonPapel = this.scene.add.image(0, 0, 'boton_papel');
@@ -55,7 +50,6 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonPapel);
         buttonPapel.setInteractive();
         buttonPapel.on('pointerdown', () => {
-            this.hand.playUser(1);
         });
 
         const buttonTijera = this.buttonTijera = this.scene.add.image(0, 0, 'boton_tijera');
@@ -64,7 +58,6 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonTijera);
         buttonTijera.setInteractive();
         buttonTijera.on('pointerdown', () => {
-            this.hand.playUser(2);
         });
 
         this.buttons.push(buttonPiedra);
