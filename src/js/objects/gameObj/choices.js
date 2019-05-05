@@ -13,7 +13,8 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
         this.members = [];
 
         this.scene.ee.on('countdown', () => {
-            this.scene.choices.showPortraits();
+            if (!this.leg.showed)
+                this.scene.choices.showPortraits();
         });
 
         this.create();
@@ -58,15 +59,25 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
 
     // PARTS
     showParts() {
-        //this.scene.text.hide();
-        //this.scene.monster.
+        let cont = 0;
         this.hideMembers();
         this.members.forEach((el) => {
             if (!el.selectedPart) el.show('part');
-            else el.hide();
+            else {
+                el.hide();
+                cont++;
+            }
         });
         setTimeout(() => {
-            this.scene.text.setText('Elige un\nmiembro', '94px');
+            if (cont >= 3) {
+                this.scene.text.setText('Te has\npasado\nel juego', '94px');
+                this.scene.input.on('pointerdown', () => {
+                    this.scene.scene.start('MenuScene');
+                })
+            } else {
+                this.scene.text.setText('Elige un\nmiembro', '94px');
+                
+            }
             this.scene.text.show();
         }, 200);
     }

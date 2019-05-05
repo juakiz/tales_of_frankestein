@@ -25,6 +25,7 @@ export default class Leg extends Phaser.GameObjects.Container {
         this.add(portrait);
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
+            this.showed = true;
             this.head = new LegsGame(this.scene, this, 'LegsGame');
             this.parentContainer.showControls();
         });

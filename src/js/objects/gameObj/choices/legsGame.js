@@ -13,20 +13,26 @@ export default class LegsGame extends Phaser.GameObjects.Container {
         };
 
         this.scene.ee.on('countdown', () => {
-            this.scene.text.hide();
-            this.scene.text.setText('WIN', '140px');
-            this.scene.text.show();
-            setTimeout(() => {
-                this.scene.choices.defeatedBoss('leg');
-                this.scene.choices.showParts();
-                this.removeSpider();
-            }, 1200);
+            console.log(this.spider.visible);
+            if (this.spider.visible) {
+                this.scene.text.hide();
+                this.scene.text.setText('WIN', '140px');
+                this.scene.text.show();
+                setTimeout(() => {
+                    this.parentContainer.showed = false;
+                    this.scene.text.hide();
+                    this.scene.choices.defeatedBoss('leg');
+                    this.scene.choices.showParts();
+                    this.removeSpider();
+                }, 1200);
+            }
         });
 
         this.create();
     }
     
     removeSpider() {
+        this.spider.visible = false;
         this.spider.destroy();
         this.spider.patasDer.destroy();
         this.spider.patasIzq.destroy();

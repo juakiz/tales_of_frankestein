@@ -44,7 +44,6 @@ export default class Timer extends Phaser.GameObjects.Container {
                     this.setTime(this.seconds);
                 } else {
                     this.scene.ee.emit('countdown');
-                    // this.scene.choices.showPortraits();
                 }
             },
             args: [secs],

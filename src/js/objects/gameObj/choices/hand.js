@@ -44,7 +44,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonPiedra);
         buttonPiedra.setInteractive();
         buttonPiedra.on('pointerdown', () => {
-            if (this.scene.monster.monkey.visible == true){
+            if (this.scene.monster.monkey && this.scene.monster.monkey.visible == true){
                 this.miniGame.playUser(0);
                 this.scene.tweens.add({
                     targets: buttonPiedra,
@@ -62,7 +62,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonPapel);
         buttonPapel.setInteractive();
         buttonPapel.on('pointerdown', () => {
-            if (this.scene.monster.monkey.visible == true){
+            if (this.scene.monster.monkey && this.scene.monster.monkey.visible == true){
                 this.miniGame.playUser(1);
                 this.scene.tweens.add({
                     targets: buttonPapel,
@@ -80,7 +80,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonTijera);
         buttonTijera.setInteractive();
         buttonTijera.on('pointerdown', () => {
-            if (this.scene.monster.monkey.visible == true){
+            if (this.scene.monster.monkey && this.scene.monster.monkey.visible == true){
                 this.miniGame.playUser(2);
                 this.scene.tweens.add({
                     targets: buttonTijera,

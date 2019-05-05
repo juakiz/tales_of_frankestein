@@ -38,18 +38,6 @@ export default class HeadGame extends Phaser.GameObjects.Container {
 
         this.buttons = [playBtn1, playBtn2, playBtn3];
         this.buttons.forEach(el => el.visible = false);
-
-        // const back = this.scene.add.image(60 , 650, "back");
-        // back.setScale(0.2);
-        // back.setInteractive();
-        // back.on('pointerdown', () => {
-        //     this.scene.scene.restart('GameScene');
-        // });
-
-        // const esfinje = this.esfinje = this.scene.add.image(0, 0, 'esfinje_1');
-        // esfinje.setPosition(1000, 400);
-        // // esfinje.setOrigin(1000, 400);
-        // this.add(esfinje);
     }
 
     play() {
@@ -170,7 +158,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
             }
         }
         if (question == 2) { //la pregunta
-            if (option == "1") { //la repuesta eleguida
+            if (option == "13112211") { //la repuesta eleguida
                 this.scene.text.hide();
                 this.scene.text.setText('WIN', '140px');
                 this.scene.text.show();
