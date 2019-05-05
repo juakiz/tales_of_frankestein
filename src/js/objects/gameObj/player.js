@@ -13,6 +13,8 @@ export default class Player extends Phaser.GameObjects.Container {
         this.setScale(0.4);
 
         this.create();
+
+        this.move = 0;
     }
 
     create() {
@@ -51,5 +53,7 @@ export default class Player extends Phaser.GameObjects.Container {
     }
 
     update() {
+        const newX = this.x + this.move;
+        if (newX > 100 && newX < 900) this.x = this.x + this.move;
     }
 }
