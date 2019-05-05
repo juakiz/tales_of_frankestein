@@ -42,13 +42,14 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.audio('musicapeligro', 'src/assets/music/musica_peligro.wav');
 
     this.load.setPath('src/assets/sprites/');
-
+    this.load.image('menu', 'menu.png');
+    this.load.image('fondo_menu', 'fondo_menu.jpg');
     this.load.image('fondo', 'fondo.jpg');
     this.load.image('chains', 'chains.png');
     this.load.image('shield', 'shield.png');
     this.load.image('sword', 'sword.png');
     this.load.image('titulo', 'titulo.png')
-    this.load.image('fondMenu', 'fond_menu.jpg');
+
 
     // this.load.image('diseccion_brazo_der', 'diseccion_brazo_der.png');
     // this.load.image('diseccion_brazo_izq', 'diseccion_brazo_izq.png');
@@ -107,6 +108,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('Aranya_pierna_izq', 'Aranya_pierna_izq.png');
     this.load.image('tela_aranya', 'tela_aranya.png');
     
+    this.load.image('marcolateral', 'marcolateral.png');
     // this.load.image('base_piedra', 'base_piedra.png');
     // this.load.spritesheet('pollo', 'pollo.png', { frameWidth: 87.5, frameHeight: 107 });
   }
