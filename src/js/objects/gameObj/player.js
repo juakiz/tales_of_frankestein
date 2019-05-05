@@ -8,9 +8,9 @@ export default class Player extends Phaser.GameObjects.Container {
         this.name = name;
 
         this.x = 100;
-        this.y = 388;
+        this.y = 415;
 
-        this.setScale(0.4);
+        this.setScale(0.45);
 
         this.create();
 
