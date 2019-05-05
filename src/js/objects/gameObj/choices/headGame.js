@@ -229,6 +229,7 @@ export default class HeadGame extends Phaser.GameObjects.Container {
                 }, 1200);
             }
         }
+        this.scene.timer.abort();
     }
 
     update() {}

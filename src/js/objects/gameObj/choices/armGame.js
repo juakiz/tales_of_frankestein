@@ -121,6 +121,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
               }
           }
       }
+      this.scene.timer.abort();
     }
 
     resetGame(){
