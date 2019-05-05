@@ -8,11 +8,11 @@ export default class Monster extends Phaser.GameObjects.Container {
         this.name = name;
 
         this.scene.ee.on('countdown', () => {
-            this.esfinje.visible = false;
-            this.monkey.visible = false;
-            this.monkey_hand.visible = false;
-            this.monkey_papel.visible = false;
-            this.monkey_tijera.visible = false;
+            if(this.esfinje) this.esfinje.visible = false;
+            if(this.monkey) this.monkey.visible = false;
+            if(this.monkey_hand) this.monkey_hand.visible = false;
+            if(this.monkey_papel) this.monkey_papel.visible = false;
+            if(this.monkey_tijera) this.monkey_tijera.visible = false;
         });
 
         this.create();
@@ -25,14 +25,14 @@ export default class Monster extends Phaser.GameObjects.Container {
     update() {
     }
 
-    esfinje(){
+    rabit(){
         const esfinje = this.esfinje = this.scene.add.image(0, 0, 'atlas', 'esfinje_1');
         esfinje.setPosition(1060, 250);
         esfinje.setScale(0.75);
         this.add(esfinje);
     }
 
-    monkey(){
+    gorrilla(){
         const monkey = this.monkey = this.scene.add.image(0, 0, 'atlas', 'gorilla_body');
         monkey.setPosition(1100, 250);
         monkey.setScale(0.85);

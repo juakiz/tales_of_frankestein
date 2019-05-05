@@ -26,7 +26,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
             this.parentContainer.showControls();
-            this.scene.monster.monkey();
+            this.scene.monster.gorrilla();
         });
 
         const part = this.part = this.scene.add.image(0, 0, 'atlas', 'boton_seleccion_brazo');
@@ -44,14 +44,16 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonPiedra);
         buttonPiedra.setInteractive();
         buttonPiedra.on('pointerdown', () => {
-            this.miniGame.playUser(0);
-            this.scene.tweens.add({
-                targets: buttonPiedra,
-                scaleX: '-=0.1',
-                scaleY: '-=0.1',
-                duration: 50,
-                yoyo: true
-              });
+            if (this.scene.monster.monkey.visible == true){
+                this.miniGame.playUser(0);
+                this.scene.tweens.add({
+                    targets: buttonPiedra,
+                    scaleX: '-=0.1',
+                    scaleY: '-=0.1',
+                    duration: 50,
+                    yoyo: true
+                  });
+            }
         });
 
         const buttonPapel = this.buttonPapel = this.scene.add.image(0, 0, 'atlas', 'boton_papel');
@@ -60,14 +62,16 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonPapel);
         buttonPapel.setInteractive();
         buttonPapel.on('pointerdown', () => {
-            this.miniGame.playUser(1);
-            this.scene.tweens.add({
-                targets: buttonPapel,
-                scaleX: '-=0.1',
-                scaleY: '-=0.1',
-                duration: 50,
-                yoyo: true
-              });
+            if (this.scene.monster.monkey.visible == true){
+                this.miniGame.playUser(1);
+                this.scene.tweens.add({
+                    targets: buttonPapel,
+                    scaleX: '-=0.1',
+                    scaleY: '-=0.1',
+                    duration: 50,
+                    yoyo: true
+                });
+            }
         });
 
         const buttonTijera = this.buttonTijera = this.scene.add.image(0, 0, 'atlas', 'boton_tijera');
@@ -76,14 +80,16 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonTijera);
         buttonTijera.setInteractive();
         buttonTijera.on('pointerdown', () => {
-            this.miniGame.playUser(2);
-            this.scene.tweens.add({
-                targets: buttonTijera,
-                scaleX: '-=0.1',
-                scaleY: '-=0.1',
-                duration: 50,
-                yoyo: true
-              });
+            if (this.scene.monster.monkey.visible == true){
+                this.miniGame.playUser(2);
+                this.scene.tweens.add({
+                    targets: buttonTijera,
+                    scaleX: '-=0.1',
+                    scaleY: '-=0.1',
+                    duration: 50,
+                    yoyo: true
+                });
+            }
         });
 
         this.buttons.push(buttonPiedra);
