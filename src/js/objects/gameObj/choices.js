@@ -12,6 +12,10 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
 
         this.members = [];
 
+        this.scene.ee.on('countdown', () => {
+            this.scene.choices.showPortraits();
+        });
+
         this.create();
     }
 

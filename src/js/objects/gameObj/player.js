@@ -15,6 +15,11 @@ export default class Player extends Phaser.GameObjects.Container {
         this.create();
 
         this.move = 0;
+
+        this.scene.ee.on('countdown', () => {
+            this.papel.visible = false;
+            this.tijeras.visible = false;
+        });
     }
 
     create() {

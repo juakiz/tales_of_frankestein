@@ -7,6 +7,14 @@ export default class Monster extends Phaser.GameObjects.Container {
         if (parent) parent.add(this);
         this.name = name;
 
+        this.scene.ee.on('countdown', () => {
+            this.esfinje.visible = false;
+            this.monkey.visible = false;
+            this.monkey_hand.visible = false;
+            this.monkey_papel.visible = false;
+            this.monkey_tijera.visible = false;
+        });
+
         this.create();
     }
 

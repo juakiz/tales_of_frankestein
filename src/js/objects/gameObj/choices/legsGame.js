@@ -12,27 +12,41 @@ export default class LegsGame extends Phaser.GameObjects.Container {
             height: 720,
         };
 
-
+        this.scene.ee.on('countdown', () => {
+            this.removeSpider();
+        });
 
         this.create();
     }
+    
+    removeSpider() {
+        this.spider.destroy();
+        this.spider.patasDer.destroy();
+        this.spider.patasIzq.destroy();
+        this.blood.destroy();
+        this.ship1.destroy();
+        this.ship2.destroy();
+        this.ship3.destroy();
+        this.ship4.destroy();
+        this.ship5.destroy();
+    }
 
     create() {
-        const spider = this.scene.add.container();
+        const spider = this.spider = this.scene.add.container();
         spider.setPosition(200 , 70);
         // spider.setScale(0.6);
-        const cabeza = this.scene.add.image(0 , 0, 'atlas', "Aranya_cabeza");
-        spider.patasDer = this.scene.add.image(0 , 0, 'atlas', "Aranya_pierna_der");
-        spider.patasIzq = this.scene.add.image(0 , 0, 'atlas', "Aranya_pierna_izq");
+        const cabeza = this.cabeza = this.scene.add.image(0 , 0, 'atlas', "Aranya_cabeza");
+        spider.patasDer = this.spider.patasDer = this.scene.add.image(0 , 0, 'atlas', "Aranya_pierna_der");
+        spider.patasIzq = this.spider.patasIzq = this.scene.add.image(0 , 0, 'atlas', "Aranya_pierna_izq");
         spider.add(cabeza);
         spider.add(spider.patasDer);
         spider.add(spider.patasIzq);
-        const blood = this.scene.add.image(200 , 70, 'atlas', "blood");
-        const ship1 = this.scene.add.image(400 , 70, 'atlas', "tela_aranya");
-        const ship2 = this.scene.add.image(600 , 70, 'atlas', "tela_aranya");
-        const ship3 = this.scene.add.image(1000 , 70, 'atlas', "tela_aranya");
-        const ship4 = this.scene.add.image(700 , 70, 'atlas', "tela_aranya");
-        const ship5 = this.scene.add.image(300 , 70, 'atlas', "tela_aranya");
+        const blood = this.blood = this.scene.add.image(200 , 70, 'atlas', "sangre");
+        const ship1 = this.ship1 = this.scene.add.image(400 , 70, 'atlas', "tela_aranya");
+        const ship2 = this.ship2 = this.scene.add.image(600 , 70, 'atlas', "tela_aranya");
+        const ship3 = this.ship3 = this.scene.add.image(1000 , 70, 'atlas', "tela_aranya");
+        const ship4 = this.ship4 = this.scene.add.image(700 , 70, 'atlas', "tela_aranya");
+        const ship5 = this.ship5 = this.scene.add.image(300 , 70, 'atlas', "tela_aranya");
         
         ship1.alpha = 0; 
         ship2.alpha = 0; 
@@ -49,13 +63,6 @@ export default class LegsGame extends Phaser.GameObjects.Container {
         setTimeout(function(){ _this.throughtMove(ship4); }, 4000);
         setTimeout(function(){ _this.throughtMove(ship5); }, 4600);
         setTimeout(function(){ spider.alpha = 0; blood.alpha = 1; }, 5000);
-
-        const back = this.scene.add.image(60 , 650, 'atlas', "back");
-        back.setScale(0.2);
-        back.setInteractive();
-        back.on('pointerdown', () => {
-            this.scene.scene.restart('GameScene');
-        });
     }
 
     update() {
