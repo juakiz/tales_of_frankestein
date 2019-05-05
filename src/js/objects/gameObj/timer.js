@@ -43,7 +43,7 @@ export default class Timer extends Phaser.GameObjects.Container {
                     this.seconds--;
                     this.setTime(this.seconds);
                 } else {
-                    console.log('FIN DEL TIMER');
+                    this.scene.ee.emit('countdown');
                 }
             },
             args: [secs],

@@ -9,11 +9,12 @@ import H from '../utils/helpers';
 export default class GameScene extends Phaser.Scene {
   constructor() {
     super('GameScene');
-
-    // this.createBg();
   }
 
   create() {
+    this.ee = this.sys.events;
+    this.ee.on('countdown', () => { console.log('countdown!!'); });
+
     this.gameView = this.add.container();
     this.bg = new Background(this, this.gameView, 'Background');
     this.choices = new Choices(this, this.gameView, 'Choices');

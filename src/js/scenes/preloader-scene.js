@@ -101,6 +101,12 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('boton_tijera', 'boton_tijera.png');
     this.load.image('boton_piedra', 'boton_piedra.png');
     this.load.image('boton_papel', 'boton_papel.png');
+
+    this.load.image('Aranya_cabeza', 'Aranya_cabeza.png');
+    this.load.image('Aranya_pierna_der', 'Aranya_pierna_der.png');
+    this.load.image('Aranya_pierna_izq', 'Aranya_pierna_izq.png');
+    this.load.image('tela_aranya', 'tela_aranya.png');
+    
     // this.load.image('base_piedra', 'base_piedra.png');
     // this.load.spritesheet('pollo', 'pollo.png', { frameWidth: 87.5, frameHeight: 107 });
   }
@@ -152,7 +158,7 @@ export default class PreloaderScene extends Phaser.Scene {
     //   repeat: -1
     // });
     
-    this.scene.start('GameScene');
-    // this.scene.start('MenuScene');
+    // this.scene.start('GameScene');
+    this.scene.start('MenuScene');
   }
 }
