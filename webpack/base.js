@@ -23,7 +23,37 @@ module.exports = {
       {
         test: /\.(gif|png|jpe?g|svg|xml)$/i,
         use: "file-loader"
-      }
+      },
+
+       // Font stylesheets
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'css/[hash].[ext]'
+            }
+          },
+          'extract-loader',
+          'css-loader',
+          'postcss-loader'
+        ],
+        include: [/fonts/]
+      },
+  
+      // Font files
+      {
+        test: /\.(woff|woff2|ttf|otf)$/,
+        loader: 'file-loader',
+        include: [/fonts/],
+  
+        options: {
+          name: '[hash].[ext]',
+          outputPath: 'css/',
+          publicPath: url => '../css/' + url
+        }
+      },
     ]
   },
   plugins: [

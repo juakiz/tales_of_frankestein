@@ -55,9 +55,9 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('diseccion_piernas', 'diseccion_piernas.png');
     this.load.image('diseccion_torso', 'diseccion_torso.png');
 
-    this.load.image('brazo1', 'brazo1.png');
-    this.load.image('cabeza', 'cabeza.png');
-    this.load.image('piernas', 'piernas.png');
+    this.load.image('boton_seleccion_brazo', 'boton_seleccion_brazo.png');
+    this.load.image('boton_seleccion_cabeza', 'boton_seleccion_cabeza.png');
+    this.load.image('boton_seleccion_piernas', 'boton_seleccion_piernas.png');
 
     this.load.image('portrait_effigie', 'portrait_effigie.png');
     this.load.image('portrait_gorilla', 'portrait_gorilla.png');
@@ -65,11 +65,18 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.load.image('boton_flechaderecha', 'boton_flechaderecha.png');
     this.load.image('boton_flechaizquierda', 'boton_flechaizquierda.png');
+
+    this.load.image('boton_piedra', 'boton_piedra.png');
+    this.load.image('boton_papel', 'boton_papel.png');
+    this.load.image('boton_tijera', 'boton_tijera.png');
+
+    this.load.image('marco', 'marco.png');
+
     this.load.image("ship", "ship.png");
     this.load.image("spider", "spider.png");
     this.load.image("blood", "sangre.png");
 
-    this.load.image("back","boton_flechaizquierda.png")
+    this.load.image("back", "boton_flechaizquierda.png");
 
 
     // this.load.image('base_piedra', 'base_piedra.png');
@@ -123,7 +130,7 @@ export default class PreloaderScene extends Phaser.Scene {
     //   repeat: -1
     // });
     
-    //this.scene.start('GameScene');
-    this.scene.start('MenuScene');
+    this.scene.start('GameScene');
+    // this.scene.start('MenuScene');
   }
 }

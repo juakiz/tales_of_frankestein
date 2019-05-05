@@ -24,7 +24,7 @@ export default class ControlsScrnCnt extends Phaser.GameObjects.Container {
             this.scene.controlsScrn.visible = false;
         });
 
-        const Story = H.makeText(this.scene, 650, 440, 'principios del siglo XX, en pleno centro de la ciudad de\n las Palmas de Gran Canarias, en el castillo de la luz,\n el científico Viktor Frankenstein, comenzó a crear un ser\n humano a partir de restos de cuerpos muertos. Sin embargo\n no todo salió como estaba previsto, una fuga de gas\n provocó una fuerte explosión en el laboratorio de la cual\n surgieron extrañas criaturas que robaron las partes de\n la creación del científico\n\nEs hora de que tomes el control\n y vayas a buscar lo que es tuyo', '35px')
+        const Story = H.makeText(this.scene, 650, 440, 'A principios del siglo XX, en pleno centro de la ciudad de\n las Palmas de Gran Canarias, en el castillo de la luz,\n el científico Viktor Frankenstein, comenzó a crear un ser\n humano a partir de restos de cuerpos muertos. Sin embargo\n no todo salió como estaba previsto, una fuga de gas\n provocó una fuerte explosión en el laboratorio de la cual\n surgieron extrañas criaturas que robaron las partes de\n la creación del científico\n\nEs hora de que tomes el control\n y vayas a buscar lo que es tuyo', '35px')
 
         this.add(bg);
         this.add(title);

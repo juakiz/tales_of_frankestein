@@ -8,15 +8,15 @@ const Helpers = {
           text,
           style: {
             fontSize: size,
-            fontFamily: 'Arial',
+            fontFamily: 'credits',
             color: '#000000',
             align: 'center',
             shadow: {
-              color: '#FFFFFF',
+              color: '#606060',
               fill: true,
               offsetX: 2,
               offsetY: 2,
-              blur: 8
+              // blur: 8
             }
           }
         };
