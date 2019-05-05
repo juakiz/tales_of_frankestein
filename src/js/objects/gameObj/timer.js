@@ -53,6 +53,11 @@ export default class Timer extends Phaser.GameObjects.Container {
         });
     }
 
+    abort() {
+        this.setTime(0);
+        this.timerEvent.remove();
+    }
+
     update() {
     }
 }
