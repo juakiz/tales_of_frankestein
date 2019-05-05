@@ -21,9 +21,9 @@ export default class CreditsScrnCnt extends Phaser.GameObjects.Container {
         fond[1] = this.fond = this.scene.add.image(800, 360, 'fondo_menu');
         fond[1].setScale(1.2);
 
-        fond[2] = this.fond = this.scene.add.image(700, 300, 'marcolateral');
+        fond[2] = this.fond = this.scene.add.image(640, 400, 'marcolateral');
         // fond[2].setScale(1.2);
-        fond[2].scaleX = 1.5;
+        fond[2].scaleX = 1.6;
         fond[2].scaleY = 1;
 
         const title = H.makeText(this.scene, 640, 100, 'Credits', '120px', '#c5c500');
@@ -35,14 +35,14 @@ export default class CreditsScrnCnt extends Phaser.GameObjects.Container {
             this.scene.creditsScrn.visible = false;
         });
         const text = [];
-        text[0] = H.makeText(this.scene, 350, 270, 'Programación', '60px');
-        text[1] = H.makeText(this.scene, 350, 370, 'Joaquín Monte Soto\nAlejandro Padrón Gil\nMario Castellano González', '45px')
-        text[2] = H.makeText(this.scene, 950, 270, 'Arte', '60px');
-        text[3] = H.makeText(this.scene, 950, 370, 'Tegavay galiano González\nJoel Portero Bordón\nEdgar Moreno Martín', '45px')
-        text[4] = H.makeText(this.scene, 350, 520, 'Audio', '60px');
-        text[5] = H.makeText(this.scene, 350, 570, 'Jonatan Galindo Alvarez', '45px')
-        text[6] = H.makeText(this.scene, 950, 520, 'Narración', '60px');
-        text[7] = H.makeText(this.scene, 950, 570, 'Samuel Rodríguez García', '45px');
+        text[0] = H.makeText(this.scene, 350, 270, 'Programación', '60px', '#ffffff');
+        text[1] = H.makeText(this.scene, 350, 370, 'Joaquín Monte Soto\nAlejandro Padrón Gil\nMario Castellano González', '45px', '#ffffff')
+        text[2] = H.makeText(this.scene, 950, 270, 'Arte', '60px', '#ffffff');
+        text[3] = H.makeText(this.scene, 950, 370, 'Tegavay Galiano González\nJoel Portero Bordón\nEdgar Moreno Martín', '45px', '#ffffff')
+        text[4] = H.makeText(this.scene, 350, 520, 'Audio', '60px', '#ffffff');
+        text[5] = H.makeText(this.scene, 350, 570, 'Jonatan Galindo Alvarez', '45px', '#ffffff');
+        text[6] = H.makeText(this.scene, 950, 520, 'Narración', '60px', '#ffffff');
+        text[7] = H.makeText(this.scene, 950, 570, 'Samuel Rodríguez García', '45px', '#ffffff');
         //text.forEach();
         // this.tweens.add({
         //     targets: text,
