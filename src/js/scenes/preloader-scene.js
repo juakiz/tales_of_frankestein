@@ -48,6 +48,7 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('shield', 'shield.png');
     this.load.image('sword', 'sword.png');
     this.load.image('titulo', 'titulo.png')
+    this.load.image('fondMenu', 'fond_menu.jpg');
 
     this.load.image('diseccion_brazo_der', 'diseccion_brazo_der.png');
     this.load.image('diseccion_brazo_izq', 'diseccion_brazo_izq.png');
@@ -138,7 +139,7 @@ export default class PreloaderScene extends Phaser.Scene {
     //   repeat: -1
     // });
     
-    this.scene.start('GameScene');
-    // this.scene.start('MenuScene');
+    //this.scene.start('GameScene');
+    this.scene.start('MenuScene');
   }
 }
