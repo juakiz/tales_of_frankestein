@@ -43,7 +43,7 @@ export default class Player extends Phaser.GameObjects.Container {
     }
 
     show(part) {
-        if (part === 'brazos') this[part].visible = true;
+        if (part !== 'brazos') this[part].visible = true;
         else {
             this.brazo_der.visible = true;
             this.brazo_izq.visible = true;

@@ -27,6 +27,7 @@ export default class Head extends Phaser.GameObjects.Container {
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
             this.head = new ArmGame(this.scene, this, 'ArmGame');
+            this.parentContainer.showControls();
         });
         
         const part = this.part = this.scene.add.image(0, 0, 'boton_seleccion_cabeza');
@@ -35,6 +36,7 @@ export default class Head extends Phaser.GameObjects.Container {
         this.add(part);
         part.setInteractive();
         part.on('pointerdown', () => {
+            this.parentContainer.selectPart('head');
         });
 
         const button1 = this.button1 = this.scene.add.image(0, 0, 'marco');

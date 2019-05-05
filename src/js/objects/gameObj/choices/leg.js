@@ -26,6 +26,7 @@ export default class Leg extends Phaser.GameObjects.Container {
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
             this.head = new LegsGame(this.scene, this, 'LegsGame');
+            this.parentContainer.showControls();
         });
 
         const part = this.part = this.scene.add.image(0, 0, 'boton_seleccion_piernas');
@@ -34,6 +35,7 @@ export default class Leg extends Phaser.GameObjects.Container {
         this.add(part);
         part.setInteractive();
         part.on('pointerdown', () => {
+            this.parentContainer.selectPart('leg');
         });
 
         const buttonDer = this.buttonDer = this.scene.add.image(0, 0, 'boton_flechaderecha');
