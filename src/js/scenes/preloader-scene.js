@@ -4,6 +4,10 @@ import fondo_menu from '../../assets/sprites/fondo_menu.jpg';
 import fondo from '../../assets/sprites/fondo.jpg';
 import menu from '../../assets/sprites/menu.png';
 
+import musicamenu from '../../assets/music/menu_mas_elecciones.wav';
+import musicapeligro from '../../assets/music/musica_peligro.wav';
+
+
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
     super('PreloaderScene');
@@ -38,8 +42,8 @@ export default class PreloaderScene extends Phaser.Scene {
         // });
     });
 
-    this.load.audio('musicamenu', 'src/assets/music/menu_mas_elecciones.wav');
-    this.load.audio('musicapeligro', 'src/assets/music/musica_peligro.wav');
+    this.load.audio('musicamenu', musicamenu);
+    this.load.audio('musicapeligro', musicapeligro);
 
     // this.load.setPath('src/assets/sprites/');
     this.load.image('fondo_menu', fondo_menu);
