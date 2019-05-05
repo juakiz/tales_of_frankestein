@@ -1,7 +1,7 @@
 const Helpers = {
     WIDTH: 1280,
     HEIGHT: 720,
-    makeText: function (scene, x, y, text, size = '60px') {
+    makeText: function (scene, x, y, text, size = '60px', color = '#000000') {
       var config = {
         x: x,
         y: y,
@@ -9,7 +9,7 @@ const Helpers = {
         style: {
           fontSize: size,
           fontFamily: 'credits',
-          color: '#000000',
+          color: color,
           align: 'center',
           shadow: {
             color: '#606060',
