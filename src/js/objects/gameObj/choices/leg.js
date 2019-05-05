@@ -13,6 +13,8 @@ export default class Leg extends Phaser.GameObjects.Container {
         this.x = 13 + (418 * 2);
         this.y = 410;
 
+        this.buttons = [];
+
         this.create();
     }
 
@@ -30,18 +32,43 @@ export default class Leg extends Phaser.GameObjects.Container {
         part.setPosition(418 / 2, 298 / 2);
         part.setScale(0.5);
         this.add(part);
+        part.setInteractive();
+        part.on('pointerdown', () => {
+        });
 
         const buttonDer = this.buttonDer = this.scene.add.image(0, 0, 'boton_flechaderecha');
         buttonDer.setPosition((418 / 2) + 5, 298 / 2);
         buttonDer.setScale(0.4);
         buttonDer.setOrigin(0, 0.5);
         this.add(buttonDer);
+        buttonDer.setInteractive();
+        buttonDer.on('pointerdown', () => {
+        });
 
         const buttonIzq = this.buttonIzq = this.scene.add.image(0, 0, 'boton_flechaizquierda');
         buttonIzq.setPosition((418 / 2) - 5, 298 / 2);
         buttonIzq.setScale(0.4);
         buttonIzq.setOrigin(1, 0.5);
         this.add(buttonIzq);
+        buttonIzq.setInteractive();
+        buttonIzq.on('pointerdown', () => {
+        });
+
+        this.buttons.push(buttonDer);
+        this.buttons.push(buttonIzq);
+    }
+
+    
+    show(element) {
+        this.portrait.visible = element === 'portrait';
+        this.part.visible = element === 'part';
+        this.buttons.forEach(el => el.visible = element === 'buttons');
+    }
+
+    hide() {
+        this.portrait.visible = false;
+        this.part.visible = false;
+        this.buttons.forEach(el => el.visible = false);
     }
 
     update() {

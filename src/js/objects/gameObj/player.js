@@ -35,6 +35,19 @@ export default class Player extends Phaser.GameObjects.Container {
         const torso = this.torso = this.scene.add.image(0, 0, 'diseccion_torso');
         torso.setOrigin(0.5, 1);
         this.add(torso);
+
+        piernas.visible = false;
+        cabeza.visible = false;
+        brazo_der.visible = false;
+        brazo_izq.visible = false;
+    }
+
+    show(part) {
+        if (part === 'brazos') this[part].visible = true;
+        else {
+            this.brazo_der.visible = true;
+            this.brazo_izq.visible = true;
+        }
     }
 
     update() {
