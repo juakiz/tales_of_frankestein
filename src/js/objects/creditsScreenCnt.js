@@ -21,6 +21,11 @@ export default class CreditsScrnCnt extends Phaser.GameObjects.Container {
         fond[1] = this.fond = this.scene.add.image(800, 360, 'fondo_menu');
         fond[1].setScale(1.2);
 
+        fond[2] = this.fond = this.scene.add.image(700, 300, 'marcolateral');
+        // fond[2].setScale(1.2);
+        fond[2].scaleX = 1.5;
+        fond[2].scaleY = 1;
+
         const title = H.makeText(this.scene, 640, 100, 'Credits', '120px', '#c5c500');
         
 
