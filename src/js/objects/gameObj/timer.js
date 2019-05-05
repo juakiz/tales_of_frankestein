@@ -7,6 +7,8 @@ export default class Timer extends Phaser.GameObjects.Container {
         if (parent) parent.add(this);
         this.name = name;
 
+        this.seconds = 0;
+
         this.create();
     }
 
@@ -17,12 +19,37 @@ export default class Timer extends Phaser.GameObjects.Container {
 
         this.add(bg);
 
-        const timer = this.timer = H.makeText(this.scene, 1280 - 75, 332, '00', '100px');
+        const timer = this.timer = H.makeText(this.scene, 1280 - 75, 332, null, '100px');
+        this.setTime(this.seconds)
         this.add(timer);
 
         bg.x = timer.x;
         bg.y = timer.y;
+    }
 
+    setTime(num) {
+        this.seconds = num;
+        if (num > 9) this.timer.setText(num);
+        else this.timer.setText(`0${num}`);
+    }
+
+    countdown(secs) {
+        this.setTime(secs);
+        this.timerEvent = this.scene.time.addEvent({
+            delay: 1000,
+            callback: (secs) => {
+                console.log(this.seconds);
+                if (this.seconds > 0) {
+                    this.seconds--;
+                    this.setTime(this.seconds);
+                } else {
+                    console.log('FIN DEL TIMER');
+                }
+            },
+            args: [secs],
+            callbackScope: this,
+            repeat: secs
+        });
     }
 
     update() {

@@ -17,10 +17,14 @@ export default class GameScene extends Phaser.Scene {
     this.gameView = this.add.container();
     this.bg = new Background(this, this.gameView, 'Background');
     this.choices = new Choices(this, this.gameView, 'Choices');
-    this.player = new Player(this, this.gameView, 'Player');
     this.monster = new Monster(this, this.gameView, 'Monster');
+    this.player = new Player(this, this.gameView, 'Player');
     this.timer = new Timer(this, this.gameView, 'Timer');
+    this.timer.countdown(15);
     this.text = new Text(this, this.gameView, 'Text');
+    this.text.setText('Hola', '140px');
+    this.text.hide();
+    // this.text.show();
   }
 
   update() {
