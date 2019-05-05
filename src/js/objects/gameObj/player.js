@@ -50,7 +50,7 @@ export default class Player extends Phaser.GameObjects.Container {
         brazo_izq.visible = false;
         papel.visible = false;
         tijeras.visible = false;
-        this.playerMove();
+        // this.playerMove();
     }
 
     show(part) {

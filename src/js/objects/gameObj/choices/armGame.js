@@ -6,12 +6,6 @@ export default class ArmGame extends Phaser.GameObjects.Container {
 
         if (parent) parent.add(this);
         this.name = name;
-
-        this.create();
-    }
-
-    create() {
-        
     }
 
     getRandom(min, max){
@@ -27,7 +21,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
       machineChoise = this.getRandom(0,2);
       this.scene.monster.monkeyChoise(machineChoise);
       this.scene.player.playerChoise(userChoise);
-      this.scene.player.playerMove();
+    //   this.scene.player.playerMove();
       console.log('USUARIO: '+stringOption[userChoise]);
       console.log('MAQUINA: '+stringOption[machineChoise]);
       if(userChoise == 0){

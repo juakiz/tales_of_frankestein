@@ -1,5 +1,5 @@
 import H from '../../../utils/helpers';
-import HeadGame from './headGame';
+import HandGame from './armGame';
 
 export default class Hand extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
@@ -25,7 +25,8 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(portrait);
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
-            this.head = new HeadGame(this.scene, this, 'HeadGame');
+            this.parentContainer.showControls();
+            this.scene.monster.monkey();
         });
 
         const part = this.part = this.scene.add.image(0, 0, 'boton_seleccion_brazo');
@@ -43,6 +44,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonPiedra);
         buttonPiedra.setInteractive();
         buttonPiedra.on('pointerdown', () => {
+            this.miniGame.playUser(0);
         });
 
         const buttonPapel = this.buttonPapel = this.scene.add.image(0, 0, 'boton_papel');
@@ -51,6 +53,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonPapel);
         buttonPapel.setInteractive();
         buttonPapel.on('pointerdown', () => {
+            this.miniGame.playUser(1);
         });
 
         const buttonTijera = this.buttonTijera = this.scene.add.image(0, 0, 'boton_tijera');
@@ -59,11 +62,14 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonTijera);
         buttonTijera.setInteractive();
         buttonTijera.on('pointerdown', () => {
+            this.miniGame.playUser(2);
         });
 
         this.buttons.push(buttonPiedra);
         this.buttons.push(buttonPapel);
         this.buttons.push(buttonTijera);
+
+        this.miniGame = new HandGame(this.scene, this, 'HandGame');
     }
 
     show(element) {
