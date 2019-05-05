@@ -36,7 +36,7 @@ export default class Text extends Phaser.GameObjects.Container {
             targets: this, 
             x: H.WIDTH / 2, 
             ease: 'Circ.easeOut',
-            duration: 450, 
+            duration: 200, 
         });
     }
 
@@ -45,7 +45,7 @@ export default class Text extends Phaser.GameObjects.Container {
             targets: this, 
             x: -this.bg.displayHeight,
             ease: 'Circ.easeIn',
-            duration: 250, 
+            duration: 100, 
         });
     }
 

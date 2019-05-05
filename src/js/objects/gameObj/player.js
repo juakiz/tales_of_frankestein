@@ -16,13 +16,13 @@ export default class Player extends Phaser.GameObjects.Container {
     }
 
     create() {
-        const piernas = this.piernas = this.scene.add.image(0, 0, 'diseccion_piernas');
-        piernas.setOrigin(0.5, 1);
-        this.add(piernas);
+        const leg = this.leg = this.scene.add.image(0, 0, 'diseccion_piernas');
+        leg.setOrigin(0.5, 1);
+        this.add(leg);
 
-        const cabeza = this.cabeza = this.scene.add.image(-15, 0, 'diseccion_cabeza');
-        cabeza.setOrigin(0.5, 1);
-        this.add(cabeza);
+        const head = this.head = this.scene.add.image(-15, 0, 'diseccion_cabeza');
+        head.setOrigin(0.5, 1);
+        this.add(head);
 
         const brazo_der = this.brazo_der = this.scene.add.image(0, 0, 'diseccion_brazo_der');
         brazo_der.setOrigin(0.5, 1);
@@ -36,14 +36,14 @@ export default class Player extends Phaser.GameObjects.Container {
         torso.setOrigin(0.5, 1);
         this.add(torso);
 
-        piernas.visible = false;
-        cabeza.visible = false;
+        leg.visible = false;
+        head.visible = false;
         brazo_der.visible = false;
         brazo_izq.visible = false;
     }
 
     show(part) {
-        if (part !== 'brazos') this[part].visible = true;
+        if (part !== 'hand') this[part].visible = true;
         else {
             this.brazo_der.visible = true;
             this.brazo_izq.visible = true;
