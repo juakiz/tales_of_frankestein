@@ -78,7 +78,9 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.load.image("back", "boton_flechaizquierda.png");
 
-
+    this.load.image('boton_tijera', 'boton_tijera.png');
+    this.load.image('boton_piedra', 'boton_piedra.png');
+    this.load.image('boton_papel', 'boton_papel.png');
     // this.load.image('base_piedra', 'base_piedra.png');
     // this.load.spritesheet('pollo', 'pollo.png', { frameWidth: 87.5, frameHeight: 107 });
   }

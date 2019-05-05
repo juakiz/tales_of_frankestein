@@ -7,7 +7,7 @@ export default class Text extends Phaser.GameObjects.Container {
         if (parent) parent.add(this);
         this.name = name;
 
-        this.setPosition(H.WIDTH / 2, 250);
+        this.setPosition(H.WIDTH / 2, 200);
 
         this.create();
     }

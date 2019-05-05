@@ -1,5 +1,5 @@
 import H from '../../../utils/helpers';
-import HeadGame from './headGame';
+import ArmGame from './armGame';
 
 export default class Hand extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
@@ -24,9 +24,13 @@ export default class Hand extends Phaser.GameObjects.Container {
         portrait.setScale(0.73);
         console.log(portrait);
         this.add(portrait);
+
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
-            this.head = new HeadGame(this.scene, this, 'HeadGame');
+            this.armGame = new ArmGame(this.scene, this, 'ArmGame');
+            this.scene.choices.head.visible = false;
+            this.scene.choices.hand.visible = false;
+            this.scene.choices.leg.visible = false;
         });
 
         const part = this.part = this.scene.add.image(0, 0, 'boton_seleccion_brazo');

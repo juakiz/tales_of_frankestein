@@ -11,24 +11,23 @@ export default class ArmGame extends Phaser.GameObjects.Container {
     }
 
     create() {
-        const playBtn1 = H.makeText(this.scene, 200, 550, 'Piedra', '80px');
-        playBtn1.setInteractive();
-        playBtn1.on('pointerdown', () => {
-          console.log("PIEDRA")
+        const boton_piedra = this.scene.add.image(250 , 550, "boton_piedra");
+        boton_piedra.setScale(0.4);
+        boton_piedra.setInteractive();
+        boton_piedra.on('pointerdown', () => {
           this.playUser(0);
         });
 
-        const playBtn2 = H.makeText(this.scene, 600, 550, 'Papel', '80px');
-        playBtn2.setInteractive();
-        playBtn2.on('pointerdown', () => {
-          console.log("qwewqeqwe")
+        const boton_papel = this.scene.add.image(650 , 550, "boton_papel");
+        boton_papel.setScale(0.4);
+        boton_papel.setInteractive();
+        boton_papel.on('pointerdown', () => {
           this.playUser(1);
         });
-
-        const playBtn3 = H.makeText(this.scene, 1000, 550, 'Tijera', '80px');
-        playBtn3.setInteractive();
-        playBtn3.on('pointerdown', () => {
-          console.log("asdsadsad")
+        const boton_tijera = this.scene.add.image(1100 , 550, "boton_tijera");
+        boton_tijera.setScale(0.4);
+        boton_tijera.setInteractive();
+        boton_tijera.on('pointerdown', () => {
           this.playUser(2);
         });
 
