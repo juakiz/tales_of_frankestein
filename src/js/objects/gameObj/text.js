@@ -13,7 +13,7 @@ export default class Text extends Phaser.GameObjects.Container {
     }
 
     create() {
-        const bg = this.bg = this.scene.add.image(0, 0, 'marco');
+        const bg = this.bg = this.scene.add.image(0, 0, 'atlas', 'marco');
         bg.setScale(1.5);
         bg.angle = 90;
         this.add(bg);

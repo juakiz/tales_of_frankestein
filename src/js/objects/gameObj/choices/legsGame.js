@@ -21,18 +21,18 @@ export default class LegsGame extends Phaser.GameObjects.Container {
         const spider = this.scene.add.container();
         spider.setPosition(200 , 70);
         // spider.setScale(0.6);
-        const cabeza = this.scene.add.image(0 , 0, "Aranya_cabeza");
-        spider.patasDer = this.scene.add.image(0 , 0, "Aranya_pierna_der");
-        spider.patasIzq = this.scene.add.image(0 , 0, "Aranya_pierna_izq");
+        const cabeza = this.scene.add.image(0 , 0, 'atlas', "Aranya_cabeza");
+        spider.patasDer = this.scene.add.image(0 , 0, 'atlas', "Aranya_pierna_der");
+        spider.patasIzq = this.scene.add.image(0 , 0, 'atlas', "Aranya_pierna_izq");
         spider.add(cabeza);
         spider.add(spider.patasDer);
         spider.add(spider.patasIzq);
-        const blood = this.scene.add.image(200 , 70, "blood");
-        const ship1 = this.scene.add.image(400 , 70, "tela_aranya");
-        const ship2 = this.scene.add.image(600 , 70, "tela_aranya");
-        const ship3 = this.scene.add.image(1000 , 70, "tela_aranya");
-        const ship4 = this.scene.add.image(700 , 70, "tela_aranya");
-        const ship5 = this.scene.add.image(300 , 70, "tela_aranya");
+        const blood = this.scene.add.image(200 , 70, 'atlas', "blood");
+        const ship1 = this.scene.add.image(400 , 70, 'atlas', "tela_aranya");
+        const ship2 = this.scene.add.image(600 , 70, 'atlas', "tela_aranya");
+        const ship3 = this.scene.add.image(1000 , 70, 'atlas', "tela_aranya");
+        const ship4 = this.scene.add.image(700 , 70, 'atlas', "tela_aranya");
+        const ship5 = this.scene.add.image(300 , 70, 'atlas', "tela_aranya");
         
         ship1.alpha = 0; 
         ship2.alpha = 0; 
@@ -50,7 +50,7 @@ export default class LegsGame extends Phaser.GameObjects.Container {
         setTimeout(function(){ _this.throughtMove(ship5); }, 4600);
         setTimeout(function(){ spider.alpha = 0; blood.alpha = 1; }, 5000);
 
-        const back = this.scene.add.image(60 , 650, "back");
+        const back = this.scene.add.image(60 , 650, 'atlas', "back");
         back.setScale(0.2);
         back.setInteractive();
         back.on('pointerdown', () => {

@@ -18,26 +18,26 @@ export default class Player extends Phaser.GameObjects.Container {
     }
 
     create() {
-        const leg = this.leg = this.scene.add.image(0, 0, 'diseccion_piernas');
+        const leg = this.leg = this.scene.add.image(0, 0, 'atlas', 'Frank_piernas');
         leg.setOrigin(0.5, 1);
         this.add(leg);
 
-        const head = this.head = this.scene.add.image(-15, 0, 'diseccion_cabeza');
+        const head = this.head = this.scene.add.image(-15, 0, 'atlas', 'Frank_Cabbeza');
         head.setOrigin(0.5, 1);
         this.add(head);
 
-        const brazo_der = this.brazo_der = this.scene.add.image(0, 0, 'diseccion_brazo_der');
+        const brazo_der = this.brazo_der = this.scene.add.image(0, 0, 'atlas', 'Frank_piedra');
         brazo_der.setOrigin(0.5, 1);
         
-        const brazo_izq = this.brazo_izq = this.scene.add.image(0, 0, 'diseccion_brazo_izq');
+        const brazo_izq = this.brazo_izq = this.scene.add.image(0, 0, 'atlas', 'Frank_pizza');
         brazo_izq.setOrigin(0.5, 1);
         this.add(brazo_izq);
         
-        const torso = this.torso = this.scene.add.image(0, 0, 'diseccion_torso');
+        const torso = this.torso = this.scene.add.image(0, 0, 'atlas', 'Frank_camiseta');
 
-        const papel = this.papel = this.scene.add.image(0, 0, 'Frank_papel');
+        const papel = this.papel = this.scene.add.image(0, 0, 'atlas', 'Frank_papel');
 
-        const tijeras = this.tijeras = this.scene.add.image(0, 0, 'Frank_Tijeras');
+        const tijeras = this.tijeras = this.scene.add.image(0, 0, 'atlas', 'Frank_Tijeras');
         torso.setOrigin(0.5, 1);
         this.add(torso);
         this.add(brazo_der);

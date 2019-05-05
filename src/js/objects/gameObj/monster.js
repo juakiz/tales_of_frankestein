@@ -18,30 +18,30 @@ export default class Monster extends Phaser.GameObjects.Container {
     }
 
     esfinje(){
-        const esfinje = this.esfinje = this.scene.add.image(0, 0, 'esfinje_1');
+        const esfinje = this.esfinje = this.scene.add.image(0, 0, 'atlas', 'esfinje_1');
         esfinje.setPosition(1060, 250);
         esfinje.setScale(0.75);
         this.add(esfinje);
     }
 
     monkey(){
-        const monkey = this.monkey = this.scene.add.image(0, 0, 'gorilla_body');
+        const monkey = this.monkey = this.scene.add.image(0, 0, 'atlas', 'gorilla_body');
         monkey.setPosition(1100, 250);
         monkey.setScale(0.85);
         this.add(monkey);
 
-        const monkey_hand = this.monkey_hand = this.scene.add.image(0, 0, 'gorilla_piedra');
+        const monkey_hand = this.monkey_hand = this.scene.add.image(0, 0, 'atlas', 'gorilla_piedra');
         monkey_hand.setPosition(1090, 250);
         monkey_hand.setScale(0.75);
         this.add(monkey_hand);
         this.monkeyMove(monkey_hand);
 
-        const monkey_papel = this.monkey_papel = this.scene.add.image(0, 0, 'gorilla_papel');
+        const monkey_papel = this.monkey_papel = this.scene.add.image(0, 0, 'atlas', 'gorilla_papel');
         monkey_papel.setPosition(1090, 250);
         monkey_papel.setScale(0.75);
         this.add(monkey_papel);
 
-        const monkey_tijera = this.monkey_tijera = this.scene.add.image(0, 0, 'gorilla_tijera');
+        const monkey_tijera = this.monkey_tijera = this.scene.add.image(0, 0, 'atlas', 'gorilla_tijera');
         monkey_tijera.setPosition(1090, 250);
         monkey_tijera.setScale(0.75);
         this.add(monkey_tijera);

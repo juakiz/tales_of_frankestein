@@ -19,7 +19,7 @@ export default class Hand extends Phaser.GameObjects.Container {
     }
 
     create() {
-        const portrait = this.portrait = this.scene.add.image(0, 0, 'portrait_gorilla');
+        const portrait = this.portrait = this.scene.add.image(0, 0, 'atlas', 'portrait_gorilla');
         portrait.setPosition(418 / 2, 298 / 2);
         portrait.setScale(0.73);
         this.add(portrait);
@@ -29,7 +29,7 @@ export default class Hand extends Phaser.GameObjects.Container {
             this.scene.monster.monkey();
         });
 
-        const part = this.part = this.scene.add.image(0, 0, 'boton_seleccion_brazo');
+        const part = this.part = this.scene.add.image(0, 0, 'atlas', 'boton_seleccion_brazo');
         part.setPosition(418 / 2, 298 / 2);
         part.setScale(0.5);
         this.add(part);
@@ -38,7 +38,7 @@ export default class Hand extends Phaser.GameObjects.Container {
             this.parentContainer.selectPart('hand');
         });
 
-        const buttonPiedra = this.buttonPiedra = this.scene.add.image(0, 0, 'boton_piedra');
+        const buttonPiedra = this.buttonPiedra = this.scene.add.image(0, 0, 'atlas', 'boton_piedra');
         buttonPiedra.setPosition((418 / 3) - 15, (298 / 3) - 15);
         buttonPiedra.setScale(0.3);
         this.add(buttonPiedra);
@@ -54,7 +54,7 @@ export default class Hand extends Phaser.GameObjects.Container {
               });
         });
 
-        const buttonPapel = this.buttonPapel = this.scene.add.image(0, 0, 'boton_papel');
+        const buttonPapel = this.buttonPapel = this.scene.add.image(0, 0, 'atlas', 'boton_papel');
         buttonPapel.setPosition(((418 / 3) * 2) + 15, (298 / 3) - 15);
         buttonPapel.setScale(0.3);
         this.add(buttonPapel);
@@ -70,7 +70,7 @@ export default class Hand extends Phaser.GameObjects.Container {
               });
         });
 
-        const buttonTijera = this.buttonTijera = this.scene.add.image(0, 0, 'boton_tijera');
+        const buttonTijera = this.buttonTijera = this.scene.add.image(0, 0, 'atlas', 'boton_tijera');
         buttonTijera.setPosition((418 / 2) + 8, ((298 / 3) * 2) + 15);
         buttonTijera.setScale(0.3);
         this.add(buttonTijera);
