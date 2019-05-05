@@ -20,7 +20,7 @@ export default class MainScrnCnt extends Phaser.GameObjects.Container {
 
         // menumusic.play();
 
-        //const title = this.title = this.scene.add.image(715, 150, 'titulo');
+        //const title = this.title = this.scene.add.image(715, 150, 'atlas', 'titulo');
         const playBtn = H.makeText(this.scene, 850, 325, 'PLAY', '80px', '#c5c500');
         playBtn.setInteractive();
         playBtn.on('pointerdown', () => {

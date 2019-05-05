@@ -1,0 +1,881 @@
+{
+	"textures": [
+		{
+			"image": "atlas.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1998,
+				"h": 1950
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "marcolateral",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 800,
+						"h": 500
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 800,
+						"h": 496
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 800,
+						"h": 496
+					}
+				},
+				{
+					"filename": "boton_tijera",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 596,
+						"h": 498
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 16,
+						"w": 587,
+						"h": 471
+					},
+					"frame": {
+						"x": 1,
+						"y": 499,
+						"w": 587,
+						"h": 471
+					}
+				},
+				{
+					"filename": "boton_papel",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 532,
+						"h": 512
+					},
+					"spriteSourceSize": {
+						"x": 14,
+						"y": 6,
+						"w": 501,
+						"h": 503
+					},
+					"frame": {
+						"x": 1,
+						"y": 972,
+						"w": 501,
+						"h": 503
+					}
+				},
+				{
+					"filename": "boton_flechaizquierda",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 504,
+						"h": 476
+					},
+					"spriteSourceSize": {
+						"x": 3,
+						"y": 0,
+						"w": 501,
+						"h": 472
+					},
+					"frame": {
+						"x": 1,
+						"y": 1477,
+						"w": 501,
+						"h": 472
+					}
+				},
+				{
+					"filename": "boton_piedra",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 532,
+						"h": 494
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 14,
+						"w": 501,
+						"h": 472
+					},
+					"frame": {
+						"x": 803,
+						"y": 1,
+						"w": 501,
+						"h": 472
+					}
+				},
+				{
+					"filename": "boton_seleccion_brazo",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 518,
+						"h": 489
+					},
+					"spriteSourceSize": {
+						"x": 13,
+						"y": 8,
+						"w": 501,
+						"h": 471
+					},
+					"frame": {
+						"x": 1306,
+						"y": 1,
+						"w": 501,
+						"h": 471
+					}
+				},
+				{
+					"filename": "boton_flechaderecha",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 504,
+						"h": 476
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 5,
+						"w": 500,
+						"h": 471
+					},
+					"frame": {
+						"x": 590,
+						"y": 499,
+						"w": 500,
+						"h": 471
+					}
+				},
+				{
+					"filename": "boton_seleccion_cabeza",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 532,
+						"h": 494
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 9,
+						"w": 501,
+						"h": 471
+					},
+					"frame": {
+						"x": 504,
+						"y": 972,
+						"w": 501,
+						"h": 471
+					}
+				},
+				{
+					"filename": "boton_seleccion_piernas",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 505,
+						"h": 501
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 4,
+						"w": 501,
+						"h": 471
+					},
+					"frame": {
+						"x": 504,
+						"y": 1445,
+						"w": 501,
+						"h": 471
+					}
+				},
+				{
+					"filename": "IMG-0197",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 600,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 122,
+						"y": 9,
+						"w": 462,
+						"h": 388
+					},
+					"frame": {
+						"x": 1092,
+						"y": 475,
+						"w": 462,
+						"h": 388
+					}
+				},
+				{
+					"filename": "esfinje_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 600,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 122,
+						"y": 9,
+						"w": 462,
+						"h": 388
+					},
+					"frame": {
+						"x": 1092,
+						"y": 475,
+						"w": 462,
+						"h": 388
+					}
+				},
+				{
+					"filename": "gorilla_body",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 400,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 10,
+						"w": 350,
+						"h": 385
+					},
+					"frame": {
+						"x": 1556,
+						"y": 474,
+						"w": 350,
+						"h": 385
+					}
+				},
+				{
+					"filename": "IMG-0198",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 600,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 122,
+						"y": 9,
+						"w": 462,
+						"h": 388
+					},
+					"frame": {
+						"x": 1092,
+						"y": 865,
+						"w": 462,
+						"h": 388
+					}
+				},
+				{
+					"filename": "esfinje_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 600,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 122,
+						"y": 9,
+						"w": 462,
+						"h": 388
+					},
+					"frame": {
+						"x": 1092,
+						"y": 865,
+						"w": 462,
+						"h": 388
+					}
+				},
+				{
+					"filename": "marco",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 250,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 6,
+						"w": 240,
+						"h": 387
+					},
+					"frame": {
+						"x": 1556,
+						"y": 861,
+						"w": 240,
+						"h": 387
+					}
+				},
+				{
+					"filename": "titulo",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 800,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 41,
+						"y": 100,
+						"w": 703,
+						"h": 142
+					},
+					"frame": {
+						"x": 1007,
+						"y": 1255,
+						"w": 703,
+						"h": 142
+					}
+				},
+				{
+					"filename": "portrait_effigie",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 250,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 6,
+						"w": 240,
+						"h": 387
+					},
+					"frame": {
+						"x": 1007,
+						"y": 1399,
+						"w": 240,
+						"h": 387
+					}
+				},
+				{
+					"filename": "portrait_gorilla",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 250,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 6,
+						"w": 240,
+						"h": 387
+					},
+					"frame": {
+						"x": 1249,
+						"y": 1399,
+						"w": 240,
+						"h": 387
+					}
+				},
+				{
+					"filename": "portrait_spider",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 250,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 4,
+						"y": 6,
+						"w": 240,
+						"h": 387
+					},
+					"frame": {
+						"x": 1491,
+						"y": 1399,
+						"w": 240,
+						"h": 387
+					}
+				},
+				{
+					"filename": "Aranya_pierna_der",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 400,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 62,
+						"w": 165,
+						"h": 221
+					},
+					"frame": {
+						"x": 1809,
+						"y": 1,
+						"w": 165,
+						"h": 221
+					}
+				},
+				{
+					"filename": "Aranya_pierna_izq",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 400,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 235,
+						"y": 61,
+						"w": 165,
+						"h": 221
+					},
+					"frame": {
+						"x": 1809,
+						"y": 224,
+						"w": 165,
+						"h": 221
+					}
+				},
+				{
+					"filename": "spider",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 54,
+						"w": 238,
+						"h": 147
+					},
+					"frame": {
+						"x": 1007,
+						"y": 1788,
+						"w": 238,
+						"h": 147
+					}
+				},
+				{
+					"filename": "Frank_pizza",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 762,
+						"h": 590
+					},
+					"spriteSourceSize": {
+						"x": 400,
+						"y": 234,
+						"w": 89,
+						"h": 162
+					},
+					"frame": {
+						"x": 1908,
+						"y": 447,
+						"w": 89,
+						"h": 162
+					}
+				},
+				{
+					"filename": "Aranya_cabeza",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 400,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 101,
+						"y": 66,
+						"w": 197,
+						"h": 245
+					},
+					"frame": {
+						"x": 1798,
+						"y": 861,
+						"w": 197,
+						"h": 245
+					}
+				},
+				{
+					"filename": "Frank_piernas",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 762,
+						"h": 590
+					},
+					"spriteSourceSize": {
+						"x": 289,
+						"y": 340,
+						"w": 171,
+						"h": 214
+					},
+					"frame": {
+						"x": 1798,
+						"y": 1108,
+						"w": 171,
+						"h": 214
+					}
+				},
+				{
+					"filename": "sangre",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 256,
+						"h": 256
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 28,
+						"w": 240,
+						"h": 200
+					},
+					"frame": {
+						"x": 1733,
+						"y": 1324,
+						"w": 240,
+						"h": 200
+					}
+				},
+				{
+					"filename": "Frank_Cabbeza",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 762,
+						"h": 590
+					},
+					"spriteSourceSize": {
+						"x": 288,
+						"y": 14,
+						"w": 147,
+						"h": 193
+					},
+					"frame": {
+						"x": 1733,
+						"y": 1526,
+						"w": 147,
+						"h": 193
+					}
+				},
+				{
+					"filename": "Frank_piedra",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 762,
+						"h": 590
+					},
+					"spriteSourceSize": {
+						"x": 297,
+						"y": 238,
+						"w": 149,
+						"h": 117
+					},
+					"frame": {
+						"x": 1247,
+						"y": 1788,
+						"w": 149,
+						"h": 117
+					}
+				},
+				{
+					"filename": "gorilla_tijera",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 400,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 29,
+						"y": 117,
+						"w": 133,
+						"h": 121
+					},
+					"frame": {
+						"x": 1398,
+						"y": 1788,
+						"w": 133,
+						"h": 121
+					}
+				},
+				{
+					"filename": "gorilla_papel",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 400,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 18,
+						"y": 130,
+						"w": 131,
+						"h": 113
+					},
+					"frame": {
+						"x": 1533,
+						"y": 1788,
+						"w": 131,
+						"h": 113
+					}
+				},
+				{
+					"filename": "gorilla_piedra",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 400,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 42,
+						"y": 157,
+						"w": 105,
+						"h": 100
+					},
+					"frame": {
+						"x": 1882,
+						"y": 1526,
+						"w": 105,
+						"h": 100
+					}
+				},
+				{
+					"filename": "Frank_Tijeras",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 762,
+						"h": 590
+					},
+					"spriteSourceSize": {
+						"x": 391,
+						"y": 203,
+						"w": 85,
+						"h": 102
+					},
+					"frame": {
+						"x": 1908,
+						"y": 611,
+						"w": 85,
+						"h": 102
+					}
+				},
+				{
+					"filename": "Frank_camiseta",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 762,
+						"h": 590
+					},
+					"spriteSourceSize": {
+						"x": 298,
+						"y": 173,
+						"w": 122,
+						"h": 178
+					},
+					"frame": {
+						"x": 1733,
+						"y": 1721,
+						"w": 122,
+						"h": 178
+					}
+				},
+				{
+					"filename": "Frank_papel",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 762,
+						"h": 590
+					},
+					"spriteSourceSize": {
+						"x": 388,
+						"y": 210,
+						"w": 95,
+						"h": 88
+					},
+					"frame": {
+						"x": 1882,
+						"y": 1628,
+						"w": 95,
+						"h": 88
+					}
+				},
+				{
+					"filename": "shield",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 11,
+						"w": 80,
+						"h": 84
+					},
+					"frame": {
+						"x": 1007,
+						"y": 972,
+						"w": 80,
+						"h": 84
+					}
+				},
+				{
+					"filename": "ship",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 0,
+						"w": 118,
+						"h": 128
+					},
+					"frame": {
+						"x": 1857,
+						"y": 1721,
+						"w": 118,
+						"h": 128
+					}
+				},
+				{
+					"filename": "gorilla_lengua_pezon",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 400,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 209,
+						"y": 133,
+						"w": 71,
+						"h": 61
+					},
+					"frame": {
+						"x": 1908,
+						"y": 715,
+						"w": 71,
+						"h": 61
+					}
+				},
+				{
+					"filename": "chains",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 8,
+						"w": 39,
+						"h": 92
+					},
+					"frame": {
+						"x": 1666,
+						"y": 1788,
+						"w": 39,
+						"h": 92
+					}
+				},
+				{
+					"filename": "sword",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 37,
+						"y": 1,
+						"w": 24,
+						"h": 95
+					},
+					"frame": {
+						"x": 1707,
+						"y": 1788,
+						"w": 24,
+						"h": 95
+					}
+				},
+				{
+					"filename": "tela_aranya",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 75,
+						"h": 75
+					},
+					"spriteSourceSize": {
+						"x": 21,
+						"y": 0,
+						"w": 37,
+						"h": 75
+					},
+					"frame": {
+						"x": 1007,
+						"y": 1058,
+						"w": 37,
+						"h": 75
+					}
+				},
+				{
+					"filename": "gorilla_lengua_sexy",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 400,
+						"h": 400
+					},
+					"spriteSourceSize": {
+						"x": 209,
+						"y": 86,
+						"w": 54,
+						"h": 55
+					},
+					"frame": {
+						"x": 1908,
+						"y": 778,
+						"w": 54,
+						"h": 55
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:c0949fcded7c9c0bb775ca1301208688:5a82eb9241687277f622743f87f9b7e4:cbce6b53f0f49e0bf15173c25c41f876$"
+	}
+}

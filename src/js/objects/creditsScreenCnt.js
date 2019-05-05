@@ -21,7 +21,7 @@ export default class CreditsScrnCnt extends Phaser.GameObjects.Container {
         fond[1] = this.fond = this.scene.add.image(800, 360, 'fondo_menu');
         fond[1].setScale(1.2);
 
-        fond[2] = this.fond = this.scene.add.image(640, 400, 'marcolateral');
+        fond[2] = this.fond = this.scene.add.image(640, 400, 'atlas', 'marcolateral');
         // fond[2].setScale(1.2);
         fond[2].scaleX = 1.6;
         fond[2].scaleY = 1;

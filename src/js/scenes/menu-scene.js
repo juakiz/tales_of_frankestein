@@ -8,7 +8,7 @@ export default class MenuScene extends Phaser.Scene {
   }
 
   create() {
-    // const sword = this.add.image(100, 200, 'Sword');
+    // const sword = this.add.image(100, 200, 'atlas', 'Sword');
     // this.tweens.add({
     //   targets: sword,
     //   x:1000,

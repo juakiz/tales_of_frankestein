@@ -20,7 +20,7 @@ export default class Head extends Phaser.GameObjects.Container {
     }
 
     create() {
-        const portrait = this.portrait = this.scene.add.image(0, 0, 'portrait_effigie');
+        const portrait = this.portrait = this.scene.add.image(0, 0, 'atlas', 'portrait_effigie');
         portrait.setPosition(418 / 2, 298 / 2);
         portrait.setScale(0.73);
         this.add(portrait);
@@ -32,7 +32,7 @@ export default class Head extends Phaser.GameObjects.Container {
             this.scene.monster.esfinje();
         });
         
-        const part = this.part = this.scene.add.image(0, 0, 'boton_seleccion_cabeza');
+        const part = this.part = this.scene.add.image(0, 0, 'atlas', 'boton_seleccion_cabeza');
         part.setPosition(418 / 2, 298 / 2);
         part.setScale(0.5);
         this.add(part);
@@ -41,7 +41,7 @@ export default class Head extends Phaser.GameObjects.Container {
             this.parentContainer.selectPart('head');
         });
 
-        const button1 = this.button1 = this.scene.add.image(0, 0, 'marco');
+        const button1 = this.button1 = this.scene.add.image(0, 0, 'atlas', 'marco');
         button1.setScale(0.3, 1);
         button1.setPosition((418 / 2), (298 / 3) - (button1.displayWidth / 1.5));
         button1.angle = 90;
@@ -58,7 +58,7 @@ export default class Head extends Phaser.GameObjects.Container {
         //     });
         // });
 
-        const button2 = this.button2 = this.scene.add.image(0, 0, 'marco');
+        const button2 = this.button2 = this.scene.add.image(0, 0, 'atlas', 'marco');
         button2.setScale(0.3, 1);
         button2.setPosition((418 / 2), ((298 / 3) * 2) - (button1.displayWidth / 1.5));
         button2.angle = 90;
@@ -67,7 +67,7 @@ export default class Head extends Phaser.GameObjects.Container {
         // button2.on('pointerdown', () => {
         // });
 
-        const button3 = this.button3 = this.scene.add.image(0, 0, 'marco');
+        const button3 = this.button3 = this.scene.add.image(0, 0, 'atlas', 'marco');
         button3.setScale(0.3, 1);
         button3.setPosition((418 / 2), ((298 / 3) * 3) - (button1.displayWidth / 1.5));
         button3.angle = 90;
