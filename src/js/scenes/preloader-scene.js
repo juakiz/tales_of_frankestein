@@ -51,11 +51,19 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('titulo', 'titulo.png')
 
 
-    this.load.image('diseccion_brazo_der', 'diseccion_brazo_der.png');
-    this.load.image('diseccion_brazo_izq', 'diseccion_brazo_izq.png');
-    this.load.image('diseccion_cabeza', 'diseccion_cabeza.png');
-    this.load.image('diseccion_piernas', 'diseccion_piernas.png');
-    this.load.image('diseccion_torso', 'diseccion_torso.png');
+    // this.load.image('diseccion_brazo_der', 'diseccion_brazo_der.png');
+    // this.load.image('diseccion_brazo_izq', 'diseccion_brazo_izq.png');
+    // this.load.image('diseccion_cabeza', 'diseccion_cabeza.png');
+    // this.load.image('diseccion_piernas', 'diseccion_piernas.png');
+    // this.load.image('diseccion_torso', 'diseccion_torso.png');
+
+    this.load.image('Frank_papel', 'Frank_papel.PNG');
+    this.load.image('Frank_Tijeras', 'Frank-Tijeras.PNG');
+    this.load.image('diseccion_brazo_der', 'Frank_piedra.PNG');
+    this.load.image('diseccion_brazo_izq', 'Frank_pizza.PNG');
+    this.load.image('diseccion_cabeza', 'Frank_Cabbeza.PNG');
+    this.load.image('diseccion_piernas', 'Frank_piernas.PNG');
+    this.load.image('diseccion_torso', 'Frank_camiseta.PNG');
 
     this.load.image('boton_seleccion_brazo', 'boton_seleccion_brazo.png');
     this.load.image('boton_seleccion_cabeza', 'boton_seleccion_cabeza.png');
@@ -80,6 +88,9 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('gorilla_papel', 'gorilla_papel.png');
     this.load.image('gorilla_piedra', 'gorilla_piedra.png');
     this.load.image('gorilla_tijera', 'gorilla_tijera.png');
+
+    this.load.image('esfinje_1', 'esfinje_1.PNG');
+    this.load.image('esfinje_2', 'esfinje_2.PNG');
 
 
     this.load.image("ship", "ship.png");
@@ -144,7 +155,7 @@ export default class PreloaderScene extends Phaser.Scene {
     //   repeat: -1
     // });
     
-    //this.scene.start('GameScene');
-    this.scene.start('MenuScene');
+    this.scene.start('GameScene');
+    // this.scene.start('MenuScene');
   }
 }

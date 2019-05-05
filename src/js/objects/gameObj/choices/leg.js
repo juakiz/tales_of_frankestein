@@ -45,6 +45,9 @@ export default class Leg extends Phaser.GameObjects.Container {
         this.add(buttonDer);
         buttonDer.setInteractive();
         buttonDer.on('pointerdown', () => {
+            this.scene.player.move = 20;
+            this.scene.player.scaleX = Math.abs(this.scene.player.scaleX);
+            this.scene.input.on('pointerup', () => { this.scene.player.move = 0; })
         });
 
         const buttonIzq = this.buttonIzq = this.scene.add.image(0, 0, 'boton_flechaizquierda');
@@ -54,6 +57,9 @@ export default class Leg extends Phaser.GameObjects.Container {
         this.add(buttonIzq);
         buttonIzq.setInteractive();
         buttonIzq.on('pointerdown', () => {
+            this.scene.player.move = -20;
+            this.scene.player.scaleX = Math.abs(this.scene.player.scaleX) * -1;
+            this.scene.input.on('pointerup', () => { this.scene.player.move = 0; })
         });
 
         this.buttons.push(buttonDer);

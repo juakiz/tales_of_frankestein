@@ -1,4 +1,5 @@
 import H from '../../../utils/helpers';
+import Monster from '../monster'
 
 export default class HeadGame extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
@@ -18,33 +19,25 @@ export default class HeadGame extends Phaser.GameObjects.Container {
 
 
     create() {
-        var machineChoise;
-        var options;
-        this.scene.choices.head.show('buttons');
-        machineChoise = this.getRandom(0,4);
-        options = this.getAnswer(machineChoise);
+        var machineChoise = this.machineChoise = this.getRandom(0, 4);
+        var options = this.options = this.getAnswer(machineChoise);
 
-        this.scene.text.hide();
-        this.scene.text.setText(this.questions[machineChoise], '40px');
-        this.scene.text.show();
-        
-        const playBtn1 = H.makeText(this.scene, 640, 455, options[0], '40px');
+        const PC = this.parentContainer;
+
+        const playBtn1 = this.playBtn1 = H.makeText(this.scene, PC.button1.x, PC.button1.y, options[0], '40px', '#FFFFFF');
+        this.add(playBtn1);
         playBtn1.setInteractive();
-        playBtn1.on('pointerdown', () => {
-          this.playUser(options[0], machineChoise);
-        });
 
-        const playBtn2 = H.makeText(this.scene, 640, 555, options[1], '40px');
+        const playBtn2 = this.playBtn2 = H.makeText(this.scene, PC.button2.x, PC.button2.y, options[1], '40px', '#FFFFFF');
+        this.add(playBtn2);
         playBtn2.setInteractive();
-        playBtn2.on('pointerdown', () => {
-          this.playUser(options[1], machineChoise);
-        });
 
-        const playBtn3 = H.makeText(this.scene, 640, 655, options[2], '40px');
+        const playBtn3 = this.playBtn3 = H.makeText(this.scene, PC.button3.x, PC.button3.y, options[2], '40px', '#FFFFFF');
+        this.add(playBtn3);
         playBtn3.setInteractive();
-        playBtn3.on('pointerdown', () => {
-          this.playUser(options[2], machineChoise);
-        });
+
+        this.buttons = [playBtn1, playBtn2, playBtn3];
+        this.buttons.forEach(el => el.visible = false);
 
         // const back = this.scene.add.image(60 , 650, "back");
         // back.setScale(0.2);
@@ -52,6 +45,46 @@ export default class HeadGame extends Phaser.GameObjects.Container {
         // back.on('pointerdown', () => {
         //     this.scene.scene.restart('GameScene');
         // });
+        
+        // const esfinje = this.esfinje = this.scene.add.image(0, 0, 'esfinje_1');
+        // esfinje.setPosition(1000, 400);
+        // // esfinje.setOrigin(1000, 400);
+        // this.add(esfinje);
+    }
+
+    play() {
+      const { playBtn1, playBtn2, playBtn3, machineChoise, options} = this;
+      const PC = this.parentContainer;
+
+      this.buttons.forEach(el => el.visible = false);
+
+      this.scene.text.hide();
+      this.scene.text.setText(this.questions[machineChoise], '40px');
+      this.scene.text.show();
+
+      playBtn1.on('pointerdown', () => {
+        this.playUser(options[0], machineChoise);
+      });
+
+      playBtn2.on('pointerdown', () => {
+        this.playUser(options[1], machineChoise);
+      });
+
+      playBtn3.on('pointerdown', () => {
+        this.playUser(options[2], machineChoise);
+      });
+      
+      PC.button1.on('pointerdown', () => {
+        this.playUser(options[0], machineChoise);
+      });
+
+      PC.button2.on('pointerdown', () => {
+        this.playUser(options[1], machineChoise);
+      });
+
+      PC.button3.on('pointerdown', () => {
+        this.playUser(options[2], machineChoise);
+      });
     }
 
     getAnswer(question){

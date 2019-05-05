@@ -14,12 +14,12 @@ export default class Timer extends Phaser.GameObjects.Container {
 
     create() {
         const bg = this.bg = this.scene.add.graphics();
-        bg.fillStyle(0x808080, 1);
+        bg.fillStyle(0x808080, 0.8);
         bg.fillRect(-70, -40, 135, 85);
 
         this.add(bg);
 
-        const timer = this.timer = H.makeText(this.scene, 1280 - 75, 332, null, '100px');
+        const timer = this.timer = H.makeText(this.scene, 1280 - 75, 52, null, '100px',  '#FFFFFF');
         this.setTime(this.seconds)
         this.add(timer);
 

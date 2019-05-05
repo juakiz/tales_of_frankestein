@@ -1,7 +1,7 @@
 const Helpers = {
     WIDTH: 1280,
     HEIGHT: 720,
-    makeText: function (scene, x, y, text, size = '60px', color = '#000000') {
+    makeText: function (scene, x, y, text, size = '60px', fontColor = '#000000') {
       var config = {
         x: x,
         y: y,
@@ -9,13 +9,13 @@ const Helpers = {
         style: {
           fontSize: size,
           fontFamily: 'credits',
-          color: color,
+          color: fontColor,
           align: 'center',
           shadow: {
-            color: '#606060',
+            color: '#404040',
             fill: true,
-            offsetX: 2,
-            offsetY: 2,
+            offsetX: 5,
+            offsetY: 5,
             // blur: 8
           }
         }

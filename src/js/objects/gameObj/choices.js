@@ -62,14 +62,20 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
     }
 
     selectPart(part) {
+        this.scene.player.show(part);
         this[part].selectedPart = true;
-        this.showPortraits();
+        this.scene.text.hide();
+        setTimeout(() => { this.showPortraits(); }, 200);
     }
 
     // BOSSES
     showPortraits() {
         this.hideMembers();
         this.members.forEach((el) => { if (!el.defeatedBoss) el.show('portrait'); });
+        setTimeout(() => {
+            this.scene.text.setText('¡Pelea contra\nun enemigo!', '74px');
+            this.scene.text.show();
+        }, 200);
     }
 
     defeatedBoss(part) {
@@ -79,6 +85,8 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
 
     // CONTROLS
     showControls() {
+        this.scene.timer.countdown(15);
+        this.scene.text.hide();
         this.hideMembers();
         this.members.forEach((el) => {
             if (el.selectedPart) el.show('buttons');
