@@ -34,6 +34,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(part);
         part.setInteractive();
         part.on('pointerdown', () => {
+            this.parentContainer.selectPart('hand');
         });
 
         const buttonPiedra = this.buttonPiedra = this.scene.add.image(0, 0, 'boton_piedra');
