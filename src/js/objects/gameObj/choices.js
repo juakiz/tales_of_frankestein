@@ -107,6 +107,8 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
 
     // CONTROLS
     showControls() {
+        this.scene.dangerSound.play({ loop: false });
+
         this.scene.timer.countdown(5);
         this.scene.text.hide();
         this.hideMembers();

@@ -15,6 +15,8 @@ export default class GameScene extends Phaser.Scene {
     this.ee = this.sys.events;
     this.ee.on('countdown', () => { console.log('countdown!!'); });
 
+    this.dangerSound = this.sound.add('musicapeligro', { loop: false });
+
     this.gameView = this.add.container();
     this.bg = new Background(this, this.gameView, 'Background');
     this.choices = new Choices(this, this.gameView, 'Choices');

@@ -4,8 +4,8 @@ import fondo_menu from '../../assets/sprites/fondo_menu.jpg';
 import fondo from '../../assets/sprites/fondo.jpg';
 import menu from '../../assets/sprites/menu.png';
 
-import musicamenu from '../../assets/music/menu_mas_elecciones.wav';
-import musicapeligro from '../../assets/music/musica_peligro.wav';
+import musicamenu from '../../assets/music/menu_mas_elecciones.ogg';
+import musicapeligro from '../../assets/music/musica_peligro.ogg';
 
 
 export default class PreloaderScene extends Phaser.Scene {
