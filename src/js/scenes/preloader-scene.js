@@ -56,11 +56,11 @@ export default class PreloaderScene extends Phaser.Scene {
     // this.load.image('diseccion_piernas', 'diseccion_piernas.png');
     // this.load.image('diseccion_torso', 'diseccion_torso.png');
 
-    this.load.image('diseccion_brazo_der', 'diseccion_brazo_der.png');
-    this.load.image('diseccion_brazo_izq', 'diseccion_brazo_izq.png');
+    this.load.image('diseccion_brazo_der', 'Frank_piedra.png');
+    this.load.image('diseccion_brazo_izq', 'Frank_pizza.png');
     this.load.image('diseccion_cabeza', 'Frank_Cabbeza.png');
     this.load.image('diseccion_piernas', 'Frank_piernas.png');
-    this.load.image('diseccion_torso', 'Frank_torso.png');
+    this.load.image('diseccion_torso', 'Frank_camiseta.png');
 
     this.load.image('boton_seleccion_brazo', 'boton_seleccion_brazo.png');
     this.load.image('boton_seleccion_cabeza', 'boton_seleccion_cabeza.png');

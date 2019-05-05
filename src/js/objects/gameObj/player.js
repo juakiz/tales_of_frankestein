@@ -26,16 +26,16 @@ export default class Player extends Phaser.GameObjects.Container {
 
         const brazo_der = this.brazo_der = this.scene.add.image(0, 0, 'diseccion_brazo_der');
         brazo_der.setOrigin(0.5, 1);
-        this.add(brazo_der);
-
+        
         const brazo_izq = this.brazo_izq = this.scene.add.image(0, 0, 'diseccion_brazo_izq');
         brazo_izq.setOrigin(0.5, 1);
         this.add(brazo_izq);
-
+        
         const torso = this.torso = this.scene.add.image(0, 0, 'diseccion_torso');
         torso.setOrigin(0.5, 1);
         this.add(torso);
-
+        this.add(brazo_der);
+        
         leg.visible = false;
         head.visible = false;
         brazo_der.visible = false;
