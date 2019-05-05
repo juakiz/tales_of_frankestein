@@ -26,6 +26,8 @@ export default class ArmGame extends Phaser.GameObjects.Container {
       userChoise = parseInt(userChoise);
       machineChoise = this.getRandom(0,2);
       this.scene.monster.monkeyChoise(machineChoise);
+      this.scene.player.playerChoise(userChoise);
+      this.scene.player.playerMove();
       console.log('USUARIO: '+stringOption[userChoise]);
       console.log('MAQUINA: '+stringOption[machineChoise]);
       if(userChoise == 0){

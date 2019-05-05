@@ -34,14 +34,23 @@ export default class Player extends Phaser.GameObjects.Container {
         this.add(brazo_izq);
         
         const torso = this.torso = this.scene.add.image(0, 0, 'diseccion_torso');
+
+        const papel = this.papel = this.scene.add.image(0, 0, 'Frank_papel');
+
+        const tijeras = this.tijeras = this.scene.add.image(0, 0, 'Frank_Tijeras');
         torso.setOrigin(0.5, 1);
         this.add(torso);
         this.add(brazo_der);
+        this.add(this.papel);
+        this.add(this.tijeras);
         
         leg.visible = false;
         head.visible = false;
         brazo_der.visible = false;
         brazo_izq.visible = false;
+        papel.visible = false;
+        tijeras.visible = false;
+        this.playerMove();
     }
 
     show(part) {
@@ -55,5 +64,41 @@ export default class Player extends Phaser.GameObjects.Container {
     update() {
         const newX = this.x + this.move;
         if (newX > 100 && newX < 900) this.x = this.x + this.move;
+    }
+
+    playerMove(){
+        this.scene.tweens.add({ 
+            targets: this.brazo_der, 
+            angle: -5, 
+            ease: 'Sine.easeInOut', 
+            duration: 200, 
+            delay: 500, 
+            repeat: -1, 
+            yoyo: true 
+        });
+    }
+
+    stopMove(){
+        this.scene.tweens.add({ 
+            targets: this.brazo_der, 
+            angle: 0, 
+            ease: 'Sine.easeInOut', 
+            duration: 1, 
+            delay: 0, 
+            repeat: -1, 
+            yoyo: false 
+        });
+    }
+
+    playerChoise(choise){
+        this.papel.visible = false;
+        this.tijeras.visible = false;
+        if(choise == 1){
+            this.papel.setOrigin(0.5, 1);
+            this.papel.visible = true;
+        }else if(choise == 2){
+            this.tijeras.setOrigin(0.5, 1);
+            this.tijeras.visible = true;
+        }
     }
 }

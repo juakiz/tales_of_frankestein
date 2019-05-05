@@ -35,25 +35,33 @@ export default class Monster extends Phaser.GameObjects.Container {
         monkey_hand.setScale(0.75);
         this.add(monkey_hand);
         this.monkeyMove(monkey_hand);
+
+        const monkey_papel = this.monkey_papel = this.scene.add.image(0, 0, 'gorilla_papel');
+        monkey_papel.setPosition(1090, 250);
+        monkey_papel.setScale(0.75);
+        this.add(monkey_papel);
+
+        const monkey_tijera = this.monkey_tijera = this.scene.add.image(0, 0, 'gorilla_tijera');
+        monkey_tijera.setPosition(1090, 250);
+        monkey_tijera.setScale(0.75);
+        this.add(monkey_tijera);
+
+        monkey_papel.visible = false;
+        monkey_tijera.visible = false;
+        
     }
 
     monkeyChoise(choise){
+        this.stopMove(this.monkey_hand);
         this.monkey_hand.visible = false;
+        this.monkey_papel.visible = false;
+        this.monkey_tijera.visible = false;
         if(choise == 0){
-            const monkey_choice = this.monkey_choice = this.scene.add.image(0, 0, 'gorilla_piedra');
-            monkey_choice.setPosition(1090, 250);
-            monkey_choice.setScale(0.75);
-            this.add(monkey_choice);
+            this.monkey_hand.visible = true;
         }else if(choise == 1){
-            const monkey_choice = this.monkey_choice = this.scene.add.image(0, 0, 'gorilla_papel');
-            monkey_choice.setPosition(1090, 250);
-            monkey_choice.setScale(0.75);
-            this.add(monkey_choice);
-        }else{
-            const monkey_choice = this.monkey_choice = this.scene.add.image(0, 0, 'gorilla_tijera');
-            monkey_choice.setPosition(1090, 250);
-            monkey_choice.setScale(0.75);
-            this.add(monkey_choice);
+            this.monkey_papel.visible = true;
+        }else if(choise == 2){
+            this.monkey_tijera.visible = true;
         }
     }
 
@@ -68,4 +76,17 @@ export default class Monster extends Phaser.GameObjects.Container {
             yoyo: true 
         });
     }
+
+    stopMove(monkey_hand){
+        this.scene.tweens.add({ 
+            targets: monkey_hand, 
+            angle: 5, 
+            ease: 'Sine.easeInOut', 
+            duration: 1, 
+            delay: 0, 
+            repeat: -1, 
+            yoyo: false 
+        });
+    }
+
 }
