@@ -59,6 +59,9 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
 
     // PARTS
     showParts() {
+        if (!this.scene.musica.isPlaying){
+            this.scene.musica.play();
+        }
         let cont = 0;
         this.hideMembers();
         this.members.forEach((el) => {
@@ -92,6 +95,9 @@ export default class ChoicesCnt extends Phaser.GameObjects.Container {
 
     // BOSSES
     showPortraits() {
+        if (!this.scene.musica.isPlaying){
+            this.scene.musica.play();
+        }
         this.scene.text.hide();
         this.hideMembers();
         this.members.forEach((el) => { if (!el.defeatedBoss) el.show('portrait'); });

@@ -30,6 +30,7 @@ export default class Head extends Phaser.GameObjects.Container {
             this.miniGame.play();
             this.parentContainer.showControls();
             this.scene.monster.rabit();
+            this.scene.musica.stop();
         });
         
         const part = this.part = this.scene.add.image(0, 0, 'atlas', 'boton_seleccion_cabeza');

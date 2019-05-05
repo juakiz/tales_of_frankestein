@@ -27,6 +27,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         portrait.on('pointerdown', () => {
             this.parentContainer.showControls();
             this.scene.monster.gorrilla();
+            this.scene.musica.stop();
         });
 
         const part = this.part = this.scene.add.image(0, 0, 'atlas', 'boton_seleccion_brazo');
@@ -95,7 +96,6 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.buttons.push(buttonPiedra);
         this.buttons.push(buttonPapel);
         this.buttons.push(buttonTijera);
-
         this.miniGame = new HandGame(this.scene, this, 'HandGame');
     }
 
