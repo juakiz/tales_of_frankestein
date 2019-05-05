@@ -11,32 +11,7 @@ export default class ArmGame extends Phaser.GameObjects.Container {
     }
 
     create() {
-        const boton_piedra = this.scene.add.image(250 , 550, "boton_piedra");
-        boton_piedra.setScale(0.4);
-        boton_piedra.setInteractive();
-        boton_piedra.on('pointerdown', () => {
-          this.playUser(0);
-        });
-
-        const boton_papel = this.scene.add.image(650 , 550, "boton_papel");
-        boton_papel.setScale(0.4);
-        boton_papel.setInteractive();
-        boton_papel.on('pointerdown', () => {
-          this.playUser(1);
-        });
-        const boton_tijera = this.scene.add.image(1100 , 550, "boton_tijera");
-        boton_tijera.setScale(0.4);
-        boton_tijera.setInteractive();
-        boton_tijera.on('pointerdown', () => {
-          this.playUser(2);
-        });
-
-        const back = this.scene.add.image(60 , 650, "back");
-        back.setScale(0.2);
-        back.setInteractive();
-        back.on('pointerdown', () => {
-            this.scene.scene.restart('GameScene');
-        });
+        
     }
 
     getRandom(min, max){
@@ -50,46 +25,64 @@ export default class ArmGame extends Phaser.GameObjects.Container {
       var stringOption = ['Piedra', 'Papel', 'Tijera'];
       userChoise = parseInt(userChoise);
       machineChoise = this.getRandom(0,2);
+      this.scene.monster.monkeyChoise(machineChoise);
       console.log('USUARIO: '+stringOption[userChoise]);
       console.log('MAQUINA: '+stringOption[machineChoise]);
-      if(userChoise == 0){//el usuario eligio piedra 
-        if(options[machineChoise] == 1){//si la maquina eligio papel 
-            console.log('LOST!');
+      if(userChoise == 0){
+        if(options[machineChoise] == 1){
+            this.scene.text.hide();
+            this.scene.text.setText('LOST', '140px');
+            this.scene.text.show();
         }else{
             if(options[machineChoise] == 2){
-                console.log('WIN!');
+                this.scene.text.hide();
+                this.scene.text.setText('WIN', '140px');
+                this.scene.text.show();
             }else{
                 if(options[machineChoise] == 0){
-                    console.log('DRAW!');
+                    this.scene.text.hide();
+                    this.scene.text.setText('DRAW', '140px');
+                    this.scene.text.show();
                 }
             }
         } 
       }
-      if(userChoise == 1){//el usuario eligio papel 
+      if(userChoise == 1){
         if(options[machineChoise] == 2){
-            console.log('LOST!');
+            this.scene.text.hide();
+            this.scene.text.setText('LOST', '140px');
+            this.scene.text.show();
         }else{
             if(options[machineChoise] == 0){
-                console.log('WIN!');
-    
+                this.scene.text.hide();
+                this.scene.text.setText('WIN', '140px');
+                this.scene.text.show();
             }else{
                 if(options[machineChoise] == 1){
-                    console.log('DRAW!');
+                    this.scene.text.hide();
+                    this.scene.text.setText('DRAW', '140px');
+                    this.scene.text.show();
                 }
             }
         }
       }
       
-      if(userChoise == 2) {//el usuario eligio tijera 
+      if(userChoise == 2) {
           if(options[machineChoise] == 1){
-              console.log('WIN!');
+               this.scene.text.hide();
+               this.scene.text.setText('WIN', '140px');
+               this.scene.text.show();
       
           }else{
               if(options[machineChoise] == 0){
-                  console.log('LOST!');
+                this.scene.text.hide();
+                this.scene.text.setText('LOST', '140px');
+                this.scene.text.show();
               }else{
                   if(options[machineChoise] == 2) {
-                      console.log('DRAW!');
+                    this.scene.text.hide();
+                    this.scene.text.setText('DRAW', '140px');
+                    this.scene.text.show();
                   }
               }
           }

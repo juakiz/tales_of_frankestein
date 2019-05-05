@@ -1,4 +1,5 @@
 import H from '../../../utils/helpers';
+import Monster from '../monster'
 
 export default class HeadGame extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
@@ -52,6 +53,11 @@ export default class HeadGame extends Phaser.GameObjects.Container {
         // back.on('pointerdown', () => {
         //     this.scene.scene.restart('GameScene');
         // });
+        
+        // const esfinje = this.esfinje = this.scene.add.image(0, 0, 'esfinje_1');
+        // esfinje.setPosition(1000, 400);
+        // // esfinje.setOrigin(1000, 400);
+        // this.add(esfinje);
     }
 
     getAnswer(question){

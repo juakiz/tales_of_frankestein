@@ -26,8 +26,9 @@ export default class Hand extends Phaser.GameObjects.Container {
 
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
-            this.head = new HeadGame(this.scene, this, 'HeadGame');
+            this.hand = new ArmGame(this.scene, this, 'ArmGame');
             this.parentContainer.showControls();
+            this.scene.monster.monkey();
         });
 
         const part = this.part = this.scene.add.image(0, 0, 'boton_seleccion_brazo');
@@ -45,6 +46,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonPiedra);
         buttonPiedra.setInteractive();
         buttonPiedra.on('pointerdown', () => {
+            this.hand.playUser(0);
         });
 
         const buttonPapel = this.buttonPapel = this.scene.add.image(0, 0, 'boton_papel');
@@ -53,6 +55,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonPapel);
         buttonPapel.setInteractive();
         buttonPapel.on('pointerdown', () => {
+            this.hand.playUser(1);
         });
 
         const buttonTijera = this.buttonTijera = this.scene.add.image(0, 0, 'boton_tijera');
@@ -61,6 +64,7 @@ export default class Hand extends Phaser.GameObjects.Container {
         this.add(buttonTijera);
         buttonTijera.setInteractive();
         buttonTijera.on('pointerdown', () => {
+            this.hand.playUser(2);
         });
 
         this.buttons.push(buttonPiedra);

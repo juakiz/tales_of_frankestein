@@ -1,5 +1,6 @@
 import H from '../../../utils/helpers';
 import HeadGame from './headGame';
+import Monster from '../monster';
 
 export default class Head extends Phaser.GameObjects.Container {
     constructor(scene, parent = null, name) {
@@ -26,8 +27,9 @@ export default class Head extends Phaser.GameObjects.Container {
 
         portrait.setInteractive();
         portrait.on('pointerdown', () => {
-            this.head = new ArmGame(this.scene, this, 'ArmGame');
+            this.head = new HeadGame(this.scene, this, 'HeadGame');
             this.parentContainer.showControls();
+            this.scene.monster.esfinje();
         });
         
         const part = this.part = this.scene.add.image(0, 0, 'boton_seleccion_cabeza');
